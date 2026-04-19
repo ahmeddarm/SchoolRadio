@@ -3,184 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة مدرسية عن التجارة</title>
+    <title>إذاعة مدرسية - الفيزياء</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
 
         :root {
-            --primary-color: #003366; /* أزرق داكن (يعبر عن الثقة والمؤسسية) */
-            --accent-color: #d4af37; /* ذهبي (يعبر عن القيمة والازدهار) */
-            --bg-color: #ffffff;
-            --text-color: #212121;
-            --box-bg: #f4f7fa; /* رمادي مزرق فاتح جداً */
+            /* Monochrome / Neutral Palette */
+            --black: #111111;
+            --dark-gray: #333333;
+            --mid-gray: #666666;
+            --light-gray: #f4f5f7;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Amiri', serif;
-            background-color: #e9eff5;
+            font-family: 'Tajawal', sans-serif; /* Sans Serif Typography */
+            background-color: #e9ecef;
             margin: 0;
             padding: 20px;
-            color: var(--text-color);
-            line-height: 1.7;
+            color: var(--dark-gray);
+            line-height: 1.6;
         }
 
         .container {
-            background-color: var(--bg-color);
+            background-color: var(--white);
             width: 210mm;
             min-height: 297mm;
             margin: 0 auto;
             padding: 20mm;
             box-sizing: border-box;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-top: 6px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 8px solid var(--black);
         }
 
+        /* Typography & Hierarchy */
         h1 {
-            font-family: 'Tajawal', sans-serif;
             text-align: center;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 15px;
+            color: var(--black);
+            font-size: 28pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--mid-gray);
+            font-size: 14pt;
+            font-weight: 400;
             margin-bottom: 35px;
-            font-size: 26pt;
-            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
         }
 
         h2 {
-            font-family: 'Tajawal', sans-serif;
-            color: var(--primary-color);
-            font-size: 17pt;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            border-right: 5px solid var(--accent-color);
-            padding-right: 15px;
-            background-color: #fdfbf7;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            color: var(--black);
+            font-size: 16pt;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
 
-        p, li {
-            font-size: 15pt;
-            margin-bottom: 10px;
+        .section-number {
+            background-color: var(--black);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px; /* Structured Corporate Look */
+            font-size: 14pt;
+            margin-left: 10px;
+        }
+
+        /* Structured Layout / Infographic Style */
+        .section-box {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .intro-box {
+            background-color: var(--light-gray);
+            border-right: 4px solid var(--black);
+            border-left: none; border-top: none; border-bottom: none;
+        }
+
+        .student-badge {
+            background-color: var(--light-gray);
+            color: var(--mid-gray);
+            font-size: 11pt;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        p {
+            font-size: 13.5pt;
+            margin: 0 0 10px 0;
             text-align: justify;
         }
 
-        .intro, .outro {
-            background-color: var(--box-bg);
-            padding: 22px;
-            border-radius: 8px;
-            border-right: 4px solid var(--primary-color);
-        }
-
-        .student-name {
-            color: #37474f;
-            font-size: 13pt;
-            font-family: 'Tajawal', sans-serif;
+        .quran-text {
+            font-size: 16pt;
             font-weight: 500;
-            display: inline-block;
-            margin-bottom: 8px;
-            background-color: #e0e6ed;
-            padding: 4px 10px;
-            border-radius: 4px;
-        }
-
-        .quran {
-            font-family: 'Amiri', serif;
-            color: #003366;
-            font-size: 17pt;
             text-align: center;
+            color: var(--black);
             margin: 15px 0;
-            background-color: #fcfaf2;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px dashed var(--accent-color);
-            line-height: 2;
         }
 
-        ul {
-            list-style-type: square;
-            padding-right: 25px;
-            color: var(--text-color);
+        /* Grid System for Lists */
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
-        li::marker {
-            color: var(--accent-color);
+        .grid-list li {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 12.5pt;
+            border-right: 3px solid var(--mid-gray);
         }
 
-        /* تنسيقات الطباعة */
+        .qa-box {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .q-text { font-weight: 700; color: var(--black); margin-bottom: 5px;}
+        .a-text { color: var(--dark-gray); }
+
+        /* Print Optimization */
         @media print {
-            body { background-color: #fff; padding: 0; margin: 0; }
-            .container { width: 100%; margin: 0; box-shadow: none; padding: 15mm; border-top: none; }
-            h2 { background-color: transparent !important; border-color: #000 !important; color: #000 !important; }
-            .quran, .intro, .outro { background-color: #f9f9f9 !important; border: 1px solid #ccc !important; -webkit-print-color-adjust: exact; }
-            .student-name { background-color: transparent !important; }
+            body { background-color: var(--white); padding: 0; margin: 0; }
+            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: none; }
+            .section-box, .grid-list li, .intro-box, .student-badge { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .grid-list { grid-template-columns: 1fr; } /* Fallback for safe printing */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>إذاعة مدرسية عن التجارة وأخلاقياتها</h1>
+        <h1>الفيزياء والفلك</h1>
+        <div class="subtitle">فهم الكون: من الذرة المتناهية الصغر إلى المجرات المتسعة</div>
 
-        <div class="intro">
+        <div class="section-box intro-box">
             <p><strong>المقدمة:</strong></p>
-            <p>بسم الله الرحمن الرحيم. الحمد لله الرزاق ذي القوة المتين، والصلاة والسلام على المبعوث رحمة للعالمين، نبينا محمد ﷺ، الذي ضرب لنا أروع الأمثلة في الأمانة والصدق قبل النبوة وبعدها.
+            <p>بسم الله الرحمن الرحيم. الحمد لله الذي خلق الكون بنظام دقيق، وقوانين محكمة، لا تتبدل ولا تتخلف. والصلاة والسلام على نبينا محمد ﷺ.
             مديرنا الفاضل، معلمينا الكرام، زملائي الطلاب.. السلام عليكم ورحمة الله وبركاته.
-            موضوعنا اليوم عن شريان الاقتصاد، وعصب الحياة، وبانية الحضارات؛ نتحدث اليوم عن <strong>"التجارة"</strong>. التجارة في منظورنا ليست مجرد أرقام وحسابات وعمليات بيع وشراء، بل هي أمانة، وقيمة مضافة، ومجال رحب للإبداع وريادة الأعمال، بها تنهض الأمم، وتزدهر المجتمعات، وتُبنى جسور التواصل بين الشعوب.</p>
+            موضوعنا اليوم هو العلم الذي يفسر لغة الكون، وهو أساس التطور التكنولوجي الحديث؛ <strong>"علم الفيزياء"</strong>. الفيزياء ليست مجرد معادلات معقدة، بل هي محاولة الإنسان لفهم عظمة الخالق في حركة الكواكب، وتمدد الكون، وسلوك الضوء والمادة.</p>
         </div>
 
-        <h2>1. فقرة القرآن الكريم</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <div class="quran">
-            ﷽<br>
-            {يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَأْكُلُوا أَمْوَالَكُم بَيْنَكُم بِالْبَاطِلِ إِلَّا أَن تَكُونَ تِجَارَةً عَن تَرَاضٍ مِّنكُمْ ۚ وَلَا تَقْتُلُوا أَنفُسَكُمْ ۚ إِنَّ اللَّهَ كَانَ بِكُمْ رَحِيمًا}<br>
-            <small>[النساء: 29]</small>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">1</span> القرآن الكريم</h2>
+            <p class="quran-text">
+                ﷽<br>
+                ﴿ وَالسَّمَاءَ بَنَيْنَاهَا بِأَيْدٍ وَإِنَّا لَمُوسِعُونَ *  وَالْأَرْضَ فَرَشْنَاهَا فَنِعْمَ الْمَاهِدُونَ ﴾<br>
+                <small style="color: var(--mid-gray); font-size: 12pt;">[الذاريات: 47-48]</small>
+            </p>
+            <p style="text-align: center; font-size: 12pt; color: var(--mid-gray);">آية عظيمة تشير إلى الحقيقة الفيزيائية والفلكية المذهلة: "تمدد الكون".</p>
         </div>
 
-        <h2>2. فقرة الحديث الشريف</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <p>التجارة المبنية على الصدق ترتفع بصاحبها لأعلى المراتب، عن أبي سعيد الخدري رضي الله عنه، عن النبي ﷺ قال:</p>
-        <p style="text-align: center; font-weight: bold; font-size: 17pt; color: #003366;">«التَّاجِرُ الصَّدُوقُ الأَمِينُ مَعَ النَّبِيِّينَ، وَالصِّدِّيقِينَ، وَالشُّهَدَاءِ».</p>
-        <p><small>(رواه الترمذي وصححه الألباني)</small></p>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">2</span> الحديث الشريف</h2>
+            <p>عن أبي بكرة نفيع بن الحارث رضي الله عنه، قال رسول الله ﷺ:</p>
+            <p class="quran-text" style="font-weight: 700;">
+                «إِنَّ الشَّمْسَ وَالْقَمَرَ آيَتَانِ مِنْ آيَاتِ اللَّهِ يُخَوِّفُ اللَّهُ بِهِمَا عِبَادَهُ، وَإِنَّهُمَا لَا يَنْكَسِفَانِ لِمَوْتِ أَحَدٍ مِنْ النَّاسِ، فَإِذَا رَأَيْتُمْ مِنْهَا شَيْئًا فَصَلُّوا وَادْعُوا اللَّهَ حَتَّى يُكْشَفَ مَا بِكُمْ»
+            </p>
+            <p style="text-align: center; font-size: 12pt; color: var(--mid-gray);">(رواه البخاري ومسلم)</p>
+        </div>
 
-        <h2>3. فقرة هل تعلم (حقائق اقتصادية وتاريخية)</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <ul>
-            <li>هل تعلم أن نبينا محمد ﷺ عمل في التجارة في شبابه، ولُقب بـ "الصادق الأمين" لفرط نزاهته وصدقه في معاملاته التجارية؟</li>
-            <li>هل تعلم أن الإسلام انتشر في أكبر دولة إسلامية من حيث عدد السكان (إندونيسيا) ودول جنوب شرق آسيا، عبر أخلاق التجار المسلمين وحسن تعاملهم، دون إطلاق سيف واحد؟</li>
-            <li>هل تعلم أن التجارة الإلكترونية والتقنيات الرقمية غيرت مفهوم الأسواق؛ فأصبحت الفكرة المبتكرة والمهارة التقنية رأس مال يضاهي الأموال النقدية؟</li>
-            <li>هل تعلم أن الاقتصاد الناجح يعتمد على "الموثوقية"؛ فخداع المستهلك قد يحقق ربحاً مؤقتاً، لكنه يدمر العلامة التجارية للشركة إلى الأبد؟</li>
-        </ul>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">3</span> هل تعلم؟ (حقائق فيزيائية)</h2>
+            <ul class="grid-list">
+                <li>يستغرق ضوء الشمس حوالي <strong>8 دقائق و 20 ثانية</strong> للوصول إلى كوكب الأرض، مما يعني أننا نرى الشمس دائماً في ماضيها.</li>
+                <li>عالم الفلك والفيزياء <strong>إدوين هابل</strong> هو من أثبت في عام 1929 أن المجرات تبتعد عنا، مما يعني أن <strong>الكون يتمدد</strong>.</li>
+                <li>قوة الجاذبية هي الأضعف بين القوى الأساسية الأربع في الطبيعة، لكنها هي المسؤولة عن بقاء الكواكب في مداراتها حول النجوم.</li>
+                <li>توجد حالة للمادة تسمى "النقطة الثلاثية"، وفيها يمكن للماء أن يتجمد ويغلي في نفس اللحظة تحت ضغط ودرجة حرارة محددين.</li>
+            </ul>
+        </div>
 
-        <h2>4. فقرة حكم وأقوال</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <ul>
-            <li><strong>عمر بن الخطاب رضي الله عنه:</strong> "لا يَبِعْ في سُوقِنَا إلا مَنْ قَدْ تَفَقَّهَ في الدِّينِ"؛ للتأكيد على أهمية معرفة الحلال والحرام في المعاملات.</li>
-            <li><strong>حكمة اقتصادية:</strong> "التاجر الجريء مرزوق، والتاجر الجبان محروم، ولكن الأمانة هي حارس الرزق".</li>
-            <li><strong>قول مأثور في ريادة الأعمال:</strong> "لا تبحث عن زبائن لمنتجك، بل ابحث عن حلول مبتكرة لاحتياجات الناس، وسيأتي الزبائن إليك".</li>
-        </ul>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">4</span> حكم وأقوال علماء</h2>
+            <ul class="grid-list">
+                <li><strong>الحسن بن الهيثم (مؤسس علم البصريات):</strong> "الحق مطلوب لذاته، وكل مطلوب لذاته فليس يُعنى طالبه بغير وُجوده".</li>
+                <li><strong>آلبرت أينشتاين:</strong> "الخيال أهم من المعرفة؛ فالمعرفة محدودة، بينما الخيال يحيط بالعالم كله".</li>
+                <li><strong>إسحاق نيوتن:</strong> "ما نعرفه هو مجرد قطرة، وما نجهله هو محيط شاسع".</li>
+                <li><strong>ماكس بلانك (مؤسس فيزياء الكم):</strong> "العلم لا يستطيع حل اللغز المطلق للطبيعة، لأننا نحن أنفسنا جزء من هذا اللغز".</li>
+            </ul>
+        </div>
 
-        <h2>5. كلمة الصباح (رواد المستقبل)</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <p>زملائي الطلاب.. العالم اليوم لم يعد يعتمد على الوظائف التقليدية فحسب، بل اتجه بقوة نحو "ريادة الأعمال" والاقتصاد القائم على المعرفة. التاجر الناجح في عصرنا هو من يمتلك مهارات التفكير النقدي، والقدرة على تحليل البيانات، وحل المشكلات بطرق مبتكرة. التجارة اليوم تعني ابتكار تطبيق يسهل حياة الناس، أو بناء نظام تقني يربط بين الخدمات، أو تقديم قيمة حقيقية للمجتمع.</p>
-        <p>ولكن، مهما تطورت أدوات التجارة من الأسواق القديمة إلى الخوارزميات الرقمية، تبقى القاعدة الذهبية ثابتة: "الصدق والأمانة". إن بركة الرزق لا تُقاس بحجم الأرقام في الحساب البنكي، بل بكون هذا المال حلالاً طيباً. استثمروا أوقاتكم في تعلم مهارات العصر التقنية والمالية، وكونوا رواد أعمال يبنون أوطانهم بأمانة واحترافية.</p>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">5</span> كلمة الصباح (بين العلم والإيمان)</h2>
+            <p>زملائي الطلاب.. إن دراسة الفيزياء وعلم الفلك ليست مجرد مساحة لحل المعادلات المكتوبة على السبورة، بل هي نافذة نطل منها على عظمة الخالق. كما سمعنا في الحديث الشريف، فإن ظاهرتي الكسوف والخسوف هما ظاهرتان فيزيائيتان وفلكيتان دقيقتان تعتمدان على حركة الأجرام السماوية واصطفافها وحجب الضوء.</p>
+            <p>النبي ﷺ صحح معتقدات الناس الخرافية في ذلك الزمان بأنها تحدث لموت شخص، وربطها مباشرة بقوة الله وقوانينه في الكون. الفيزياء الحديثة لا تعارض إيماننا، بل تعمقه؛ فعندما تدرس الجاذبية، والطاقة، وقوانين الحركة، أنت في الحقيقة تقرأ "كتالوج" هذا الكون العظيم الذي أبدعه الله. كونوا شغوفين بالعلم، فالمستقبل يُبنى بعقول تبحث وتتفكر.</p>
+        </div>
 
-        <h2>6. فقرة الدعاء</h2>
-        <span class="student-name">الطالب/ ..............................</span>
-        <ul>
-            <li>اللهم اكفنا بحلالك عن حرامك، وأغننا بفضلك عمن سواك.</li>
-            <li>اللهم بارك لنا في أوقاتنا وأعمالنا، وارزقنا رزقاً طيباً مباركاً فيه.</li>
-            <li>اللهم ارزقنا الأمانة في القول والعمل، واجعلنا مفاتيح للخير مغاليق للشر.</li>
-            <li>اللهم افتح لنا أبواب حكمتك، وانشر علينا من رحمتك.</li>
-            <li>اللهم آمين.</li>
-        </ul>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">6</span> سؤال وجواب</h2>
+            <div class="qa-box">
+                <span class="q-text">السؤال الأول: كم يستغرق ضوء الشمس للوصول إلى كوكب الأرض؟</span>
+                <span class="a-text"><strong>الجواب:</strong> يستغرق حوالي 8 دقائق و 20 ثانية.</span>
+            </div>
+            <div class="qa-box">
+                <span class="q-text">السؤال الثاني: من هو عالم الفلك والفيزياء الذي أثبت أن الكون يتمدد؟</span>
+                <span class="a-text"><strong>الجواب:</strong> العالم إدوين هابل.</span>
+            </div>
+        </div>
 
-        <div class="outro">
-            <p><strong>الخاتمة:</strong></p>
-            <p>في الختام.. تذكروا أن كل مهارة تتعلمونها اليوم هي استثمار وتجارة رابحة في مستقبلكم. نسأل الله أن يوفقنا وإياكم للعلم النافع والعمل الصالح. شكراً لحسن استماعكم، والسلام عليكم ورحمة الله وبركاته.</p>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">7</span> الدعاء والخاتمة</h2>
+            <p style="margin-bottom: 20px;">
+                <strong>الدعاء:</strong> اللهم أرنا الحق حقاً وارزقنا اتباعه. اللهم علمنا ما ينفعنا، وانفعنا بما علمتنا، وزدنا علماً وتفكراً في خلقك. اللهم آمين.
+            </p>
+            <p>
+                <strong>الخاتمة:</strong> في الختام، نتمنى أن نكون قد قدمنا لكم ومضة علمية تنير عقولكم. تفكروا في الكون، وادرسوا بجد. نشكركم على حسن الاستماع، والسلام عليكم ورحمة الله وبركاته.
+            </p>
         </div>
     </div>
 
 </body>
 </html>
+
 
