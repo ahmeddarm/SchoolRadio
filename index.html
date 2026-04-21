@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة مدرسية - الفيزياء</title>
+    <title>إذاعة مدرسية - الصلاة</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
 
         :root {
             /* Monochrome / Neutral Palette */
-            --black: #111111;
+            --black: #000000;
             --dark-gray: #333333;
-            --mid-gray: #666666;
-            --light-gray: #f4f5f7;
-            --border-color: #e0e0e0;
+            --mid-gray: #757575;
+            --light-gray: #f8f9fa;
+            --border-color: #eeeeee;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Tajawal', sans-serif; /* Sans Serif Typography */
-            background-color: #e9ecef;
+            font-family: 'Tajawal', sans-serif; /* Modern Sans Serif */
+            background-color: #f0f2f5;
             margin: 0;
             padding: 20px;
             color: var(--dark-gray);
@@ -33,29 +33,31 @@
             margin: 0 auto;
             padding: 20mm;
             box-sizing: border-box;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 8px solid var(--black);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 10px solid var(--black);
         }
 
-        /* Typography & Hierarchy */
-        h1 {
+        /* Layout & Visual Hierarchy */
+        header {
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
             color: var(--black);
-            font-size: 28pt;
+            font-size: 30pt;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -1px;
         }
 
         .subtitle {
-            text-align: center;
             color: var(--mid-gray);
             font-size: 14pt;
             font-weight: 400;
-            margin-bottom: 35px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            margin-top: 5px;
         }
 
         h2 {
@@ -64,198 +66,187 @@
             font-weight: 700;
             display: flex;
             align-items: center;
-            margin-top: 0;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .section-number {
+        .section-num {
             background-color: var(--black);
             color: var(--white);
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            border-radius: 4px; /* Structured Corporate Look */
-            font-size: 14pt;
-            margin-left: 10px;
+            font-size: 12pt;
+            margin-left: 12px;
+            border-radius: 2px;
         }
 
-        /* Structured Layout / Infographic Style */
-        .section-box {
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 25px;
+        /* Content Blocks / Infographic Style */
+        .content-section {
+            margin-bottom: 30px;
             position: relative;
-        }
-
-        .intro-box {
-            background-color: var(--light-gray);
-            border-right: 4px solid var(--black);
-            border-left: none; border-top: none; border-bottom: none;
-        }
-
-        .student-badge {
-            background-color: var(--light-gray);
-            color: var(--mid-gray);
-            font-size: 11pt;
-            font-weight: 500;
-            padding: 4px 10px;
-            border-radius: 20px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            padding: 20px;
             border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-right: 5px solid var(--black);
+        }
+
+        .student-label {
+            font-size: 10pt;
+            color: var(--mid-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
         }
 
         p {
             font-size: 13.5pt;
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             text-align: justify;
         }
 
-        .quran-text {
+        .holy-text {
             font-size: 16pt;
-            font-weight: 500;
+            font-weight: 600;
             text-align: center;
             color: var(--black);
-            margin: 15px 0;
+            padding: 15px 0;
+            line-height: 1.8;
         }
 
-        /* Grid System for Lists */
-        .grid-list {
+        /* Grid System */
+        .infographic-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
+            gap: 20px;
         }
 
-        .grid-list li {
+        .info-card {
             background-color: var(--light-gray);
-            padding: 15px;
+            padding: 20px;
             border-radius: 4px;
             font-size: 12.5pt;
-            border-right: 3px solid var(--mid-gray);
         }
 
-        .qa-box {
+        .full-width {
+            grid-column: 1 / -1;
+            border: 1px solid var(--black);
             background-color: var(--white);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
         }
 
-        .q-text { font-weight: 700; color: var(--black); margin-bottom: 5px;}
-        .a-text { color: var(--dark-gray); }
+        /* Spacing & Minimal Style */
+        .footer-note {
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            color: var(--mid-gray);
+            font-size: 12pt;
+        }
 
-        /* Print Optimization */
         @media print {
-            body { background-color: var(--white); padding: 0; margin: 0; }
-            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: none; }
-            .section-box, .grid-list li, .intro-box, .student-badge { 
-                -webkit-print-color-adjust: exact; 
-                print-color-adjust: exact; 
-            }
-            .grid-list { grid-template-columns: 1fr; } /* Fallback for safe printing */
+            body { background-color: white; padding: 0; }
+            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid black; }
+            .highlight-box, .info-card { -webkit-print-color-adjust: exact; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>الفيزياء والفلك</h1>
-        <div class="subtitle">فهم الكون: من الذرة المتناهية الصغر إلى المجرات المتسعة</div>
+        <header>
+            <h1>الصلاة: صلة لا تنقطع</h1>
+            <div class="subtitle">الركن الثاني وعماد الدين</div>
+        </header>
 
-        <div class="section-box intro-box">
+        <div class="content-section highlight-box">
+            <span class="student-label">مقدم الإذاعة</span>
             <p><strong>المقدمة:</strong></p>
-            <p>بسم الله الرحمن الرحيم. الحمد لله الذي خلق الكون بنظام دقيق، وقوانين محكمة، لا تتبدل ولا تتخلف. والصلاة والسلام على نبينا محمد ﷺ.
+            <p>بسم الله الرحمن الرحيم. الحمد لله الذي جعل الصلاة نوراً للمؤمنين، وسكينة للمتقين، والصلاة والسلام على نبينا محمد ﷺ.
             مديرنا الفاضل، معلمينا الكرام، زملائي الطلاب.. السلام عليكم ورحمة الله وبركاته.
-            موضوعنا اليوم هو العلم الذي يفسر لغة الكون، وهو أساس التطور التكنولوجي الحديث؛ <strong>"علم الفيزياء"</strong>. الفيزياء ليست مجرد معادلات معقدة، بل هي محاولة الإنسان لفهم عظمة الخالق في حركة الكواكب، وتمدد الكون، وسلوك الضوء والمادة.</p>
+            نلتقي اليوم لنتحدث عن أعظم الصلات، وعن الموعد الذي يتكرر خمس مرات ليمنحنا القوة والطمأنينة. الصلاة ليست مجرد حركات نؤديها، بل هي معراج الروح، والوقوف الخاشع بين يدي ملك الملوك، وبها يصلح سائر العمل وتستقيم الحياة.</p>
         </div>
 
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">1</span> القرآن الكريم</h2>
-            <p class="quran-text">
+        <div class="content-section">
+            <span class="student-label">الطالب/ .......................</span>
+            <h2><span class="section-num">1</span> القرآن الكريم</h2>
+            <div class="holy-text">
                 ﷽<br>
-                ﴿ وَالسَّمَاءَ بَنَيْنَاهَا بِأَيْدٍ وَإِنَّا لَمُوسِعُونَ *  وَالْأَرْضَ فَرَشْنَاهَا فَنِعْمَ الْمَاهِدُونَ ﴾<br>
-                <small style="color: var(--mid-gray); font-size: 12pt;">[الذاريات: 47-48]</small>
-            </p>
-            <p style="text-align: center; font-size: 12pt; color: var(--mid-gray);">آية عظيمة تشير إلى الحقيقة الفيزيائية والفلكية المذهلة: "تمدد الكون".</p>
-        </div>
-
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">2</span> الحديث الشريف</h2>
-            <p>عن أبي بكرة نفيع بن الحارث رضي الله عنه، قال رسول الله ﷺ:</p>
-            <p class="quran-text" style="font-weight: 700;">
-                «إِنَّ الشَّمْسَ وَالْقَمَرَ آيَتَانِ مِنْ آيَاتِ اللَّهِ يُخَوِّفُ اللَّهُ بِهِمَا عِبَادَهُ، وَإِنَّهُمَا لَا يَنْكَسِفَانِ لِمَوْتِ أَحَدٍ مِنْ النَّاسِ، فَإِذَا رَأَيْتُمْ مِنْهَا شَيْئًا فَصَلُّوا وَادْعُوا اللَّهَ حَتَّى يُكْشَفَ مَا بِكُمْ»
-            </p>
-            <p style="text-align: center; font-size: 12pt; color: var(--mid-gray);">(رواه البخاري ومسلم)</p>
-        </div>
-
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">3</span> هل تعلم؟ (حقائق فيزيائية)</h2>
-            <ul class="grid-list">
-                <li>يستغرق ضوء الشمس حوالي <strong>8 دقائق و 20 ثانية</strong> للوصول إلى كوكب الأرض، مما يعني أننا نرى الشمس دائماً في ماضيها.</li>
-                <li>عالم الفلك والفيزياء <strong>إدوين هابل</strong> هو من أثبت في عام 1929 أن المجرات تبتعد عنا، مما يعني أن <strong>الكون يتمدد</strong>.</li>
-                <li>قوة الجاذبية هي الأضعف بين القوى الأساسية الأربع في الطبيعة، لكنها هي المسؤولة عن بقاء الكواكب في مداراتها حول النجوم.</li>
-                <li>توجد حالة للمادة تسمى "النقطة الثلاثية"، وفيها يمكن للماء أن يتجمد ويغلي في نفس اللحظة تحت ضغط ودرجة حرارة محددين.</li>
-            </ul>
-        </div>
-
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">4</span> حكم وأقوال علماء</h2>
-            <ul class="grid-list">
-                <li><strong>الحسن بن الهيثم (مؤسس علم البصريات):</strong> "الحق مطلوب لذاته، وكل مطلوب لذاته فليس يُعنى طالبه بغير وُجوده".</li>
-                <li><strong>آلبرت أينشتاين:</strong> "الخيال أهم من المعرفة؛ فالمعرفة محدودة، بينما الخيال يحيط بالعالم كله".</li>
-                <li><strong>إسحاق نيوتن:</strong> "ما نعرفه هو مجرد قطرة، وما نجهله هو محيط شاسع".</li>
-                <li><strong>ماكس بلانك (مؤسس فيزياء الكم):</strong> "العلم لا يستطيع حل اللغز المطلق للطبيعة، لأننا نحن أنفسنا جزء من هذا اللغز".</li>
-            </ul>
-        </div>
-
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">5</span> كلمة الصباح (بين العلم والإيمان)</h2>
-            <p>زملائي الطلاب.. إن دراسة الفيزياء وعلم الفلك ليست مجرد مساحة لحل المعادلات المكتوبة على السبورة، بل هي نافذة نطل منها على عظمة الخالق. كما سمعنا في الحديث الشريف، فإن ظاهرتي الكسوف والخسوف هما ظاهرتان فيزيائيتان وفلكيتان دقيقتان تعتمدان على حركة الأجرام السماوية واصطفافها وحجب الضوء.</p>
-            <p>النبي ﷺ صحح معتقدات الناس الخرافية في ذلك الزمان بأنها تحدث لموت شخص، وربطها مباشرة بقوة الله وقوانينه في الكون. الفيزياء الحديثة لا تعارض إيماننا، بل تعمقه؛ فعندما تدرس الجاذبية، والطاقة، وقوانين الحركة، أنت في الحقيقة تقرأ "كتالوج" هذا الكون العظيم الذي أبدعه الله. كونوا شغوفين بالعلم، فالمستقبل يُبنى بعقول تبحث وتتفكر.</p>
-        </div>
-
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">6</span> سؤال وجواب</h2>
-            <div class="qa-box">
-                <span class="q-text">السؤال الأول: كم يستغرق ضوء الشمس للوصول إلى كوكب الأرض؟</span>
-                <span class="a-text"><strong>الجواب:</strong> يستغرق حوالي 8 دقائق و 20 ثانية.</span>
-            </div>
-            <div class="qa-box">
-                <span class="q-text">السؤال الثاني: من هو عالم الفلك والفيزياء الذي أثبت أن الكون يتمدد؟</span>
-                <span class="a-text"><strong>الجواب:</strong> العالم إدوين هابل.</span>
+                {وَأَقِمِ الصَّلَاةَ ۖ إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ ۗ وَلَذِكْرُ اللَّهِ أَكْبَرُ ۗ وَاللَّهُ يَعْلَمُ مَا تَصْنَعُونَ}<br>
+                <small style="font-size: 11pt; color: var(--mid-gray);">[العنكبوت: 45]</small>
             </div>
         </div>
 
-        <div class="section-box">
-            <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">7</span> الدعاء والخاتمة</h2>
-            <p style="margin-bottom: 20px;">
-                <strong>الدعاء:</strong> اللهم أرنا الحق حقاً وارزقنا اتباعه. اللهم علمنا ما ينفعنا، وانفعنا بما علمتنا، وزدنا علماً وتفكراً في خلقك. اللهم آمين.
-            </p>
-            <p>
-                <strong>الخاتمة:</strong> في الختام، نتمنى أن نكون قد قدمنا لكم ومضة علمية تنير عقولكم. تفكروا في الكون، وادرسوا بجد. نشكركم على حسن الاستماع، والسلام عليكم ورحمة الله وبركاته.
-            </p>
+        <div class="content-section">
+            <span class="student-name">الطالب/ .......................</span>
+            <h2><span class="section-num">2</span> الحديث الشريف</h2>
+            <div class="holy-text" style="font-weight: 700; font-size: 15pt;">
+                عن معاذ بن جبل رضي الله عنه، قال رسول الله ﷺ:<br>
+                «رَأْسُ الأَمْرِ الإِسْلامُ، وَعَمُودُهُ الصَّلاةُ، وَذِرْوَةُ سَنَامِهِ الْجِهَادُ»
+            </div>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt;">(رواه الترمذي وقال حديث حسن صحيح)</p>
+        </div>
+
+        <div class="content-section">
+            <span class="student-label">الطالب/ .......................</span>
+            <h2><span class="section-num">3</span> هل تعلم؟ (حقائق وأحكام)</h2>
+            <div class="infographic-grid">
+                <div class="info-card full-width">
+                    <strong>الركن الذي لا يسقط:</strong><br>
+                    أركان الإسلام خمسة، أربعة منها تسقط في حال العذر (كالزكاة لغير المستطيع، والحج لغير القادر، والصوم للمريض والمسافر)، أما <strong>الصلاة فلا تسقط أبدًا</strong>؛ حتى لو كنت مريضًا تُصلى قاعدًا أو بالإيماء، أو في الحرب تُصلى صلاة الخوف، لكنها تبقى واجبة ولا تسقط.
+                </div>
+                <div class="info-card">
+                    <strong>أول المحاسبين:</strong><br>
+                    هل تعلم أن الصلاة هي أول ما يُحاسب عليه العبد يوم القيامة، فإن صلُحت فقد أفلح وأنجح، وإن فسدت فقد خاب وخسر.
+                </div>
+                <div class="info-card">
+                    <strong>صلة الروح:</strong><br>
+                    هل تعلم أن الصلاة هي العبادة الوحيدة التي فُرضت في السماء السابعة أثناء رحلة الإسراء والمعراج، لعظم مكانتها.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <span class="student-label">الطالب/ .......................</span>
+            <h2><span class="section-num">4</span> تأملات في الصلاة</h2>
+            <div class="infographic-grid">
+                <div class="info-card">
+                    <strong>نور القلوب:</strong><br>
+                    "الصلاة ميزان الإنسان؛ فمن أراد أن يعرف قدره عند الله، فلينظر إلى قدر الصلاة في قلبه".
+                </div>
+                <div class="info-card">
+                    <strong>راحة النفس:</strong><br>
+                    "كان النبي ﷺ إذا حزبه أمر أو ضاقت به الدنيا قال: أرحنا بها يا بلال؛ فالراحة الحقيقية في مناجاة الخالق".
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section highlight-box">
+            <span class="student-label">الطالب/ .......................</span>
+            <h2><span class="section-num">5</span> كلمة الصباح (نظام حياة)</h2>
+            <p>زملائي الطلاب.. الصلاة هي الضابط الحقيقي لوقتنا وحياتنا. إن الحفاظ عليها في مواقيتها يعلمنا الانضباط، والالتزام، وترتيب الأولويات. من استطاع أن ينتظم في صلاته، استطاع أن ينظم مستقبله ودراسته.</p>
+            <p>إنها المحطة التي نغسل فيها همومنا وتعبنا الدراسي لنعود بذهن صافٍ ونفس مطمئنة. لا تجعلوها مجرد روتين، بل اجعلوها وقوداً لنجاحكم وتفوقكم، فمن حفظ صلاته حفظه الله ووفقه في سائر أمره. لنعاهد أنفسنا من اليوم أن نكون من مقيمي الصلاة بصدق وخضوع.</p>
+        </div>
+
+        <div class="content-section">
+            <p><strong>الدعاء:</strong> اللهم اجعلنا مقيمي الصلاة ومن ذريتنا، ربنا وتقبل دعاء. اللهم ارزقنا الخشوع فيها، واجعلها قرة أعيننا. اللهم آمين.</p>
+            <p><strong>الخاتمة:</strong> في ختام إذاعتنا، نسأل الله أن يتقبل منا صلواتنا وأعمالنا. شكراً لكم على حسن الإنصات، والسلام عليكم ورحمة الله وبركاته.</p>
+        </div>
+
+        <div class="footer-note">
+            تم إعداد هذه الإذاعة لتعزيز الوعي بأهمية الركن الثاني من أركان الإسلام.
         </div>
     </div>
 
 </body>
 </html>
-
 
