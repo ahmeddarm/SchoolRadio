@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة مدرسية - الصلاة</title>
+    <title>إذاعة مدرسية - الأمانة</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
 
         :root {
             /* Monochrome / Neutral Palette */
-            --black: #000000;
+            --black: #111111;
             --dark-gray: #333333;
-            --mid-gray: #757575;
-            --light-gray: #f8f9fa;
-            --border-color: #eeeeee;
+            --mid-gray: #666666;
+            --light-gray: #f4f5f7;
+            --border-color: #e0e0e0;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Tajawal', sans-serif; /* Modern Sans Serif */
-            background-color: #f0f2f5;
+            font-family: 'Tajawal', sans-serif;
+            background-color: #e9ecef;
             margin: 0;
             padding: 20px;
             color: var(--dark-gray);
@@ -33,24 +34,25 @@
             margin: 0 auto;
             padding: 20mm;
             box-sizing: border-box;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border-top: 10px solid var(--black);
         }
 
-        /* Layout & Visual Hierarchy */
+        /* Typography & Hierarchy */
         header {
             text-align: center;
             border-bottom: 1px solid var(--border-color);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             padding-bottom: 20px;
         }
 
         h1 {
             color: var(--black);
-            font-size: 30pt;
+            font-size: 28pt;
             font-weight: 800;
-            margin: 0;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
         .subtitle {
@@ -66,60 +68,66 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            margin-top: 0;
             margin-bottom: 15px;
-            text-transform: uppercase;
         }
 
-        .section-num {
+        .section-number {
             background-color: var(--black);
             color: var(--white);
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            font-size: 12pt;
-            margin-left: 12px;
-            border-radius: 2px;
+            border-radius: 4px; 
+            font-size: 14pt;
+            margin-left: 10px;
         }
 
-        /* Content Blocks / Infographic Style */
-        .content-section {
-            margin-bottom: 30px;
-            position: relative;
-            padding: 20px;
+        /* Structured Layout / Infographic Style */
+        .section-box {
+            background-color: var(--white);
             border: 1px solid var(--border-color);
-            border-radius: 4px;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
         }
 
-        .highlight-box {
+        .intro-box {
             background-color: var(--light-gray);
-            border-right: 5px solid var(--black);
+            border-right: 4px solid var(--black);
+            border-left: none; border-top: none; border-bottom: none;
         }
 
-        .student-label {
-            font-size: 10pt;
+        .student-badge {
+            background-color: var(--light-gray);
             color: var(--mid-gray);
-            font-weight: 600;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
+            font-size: 11pt;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 1px solid var(--border-color);
         }
 
         p {
-            font-size: 13.5pt;
-            margin: 0 0 12px 0;
+            font-family: 'Amiri', serif;
+            font-size: 14pt;
+            margin: 0 0 10px 0;
             text-align: justify;
         }
 
-        .holy-text {
-            font-size: 16pt;
-            font-weight: 600;
+        .quran-text {
+            font-family: 'Amiri', serif;
+            font-size: 17pt;
+            font-weight: 700;
             text-align: center;
             color: var(--black);
-            padding: 15px 0;
+            margin: 15px 0;
             line-height: 1.8;
         }
 
@@ -127,36 +135,43 @@
         .infographic-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
 
         .info-card {
             background-color: var(--light-gray);
-            padding: 20px;
+            padding: 15px;
             border-radius: 4px;
             font-size: 12.5pt;
+            border-right: 3px solid var(--mid-gray);
         }
 
         .full-width {
             grid-column: 1 / -1;
-            border: 1px solid var(--black);
+            border-right: 4px solid var(--black);
             background-color: var(--white);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
         }
 
-        /* Spacing & Minimal Style */
         .footer-note {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: center;
             border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            padding-top: 15px;
             color: var(--mid-gray);
-            font-size: 12pt;
+            font-size: 11pt;
         }
 
+        /* Print Optimization */
         @media print {
-            body { background-color: white; padding: 0; }
-            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid black; }
-            .highlight-box, .info-card { -webkit-print-color-adjust: exact; }
+            body { background-color: var(--white); padding: 0; margin: 0; }
+            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid var(--black); }
+            .section-box, .info-card, .intro-box, .student-badge { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
         }
     </style>
 </head>
@@ -164,86 +179,87 @@
 
     <div class="container">
         <header>
-            <h1>الصلاة: صلة لا تنقطع</h1>
-            <div class="subtitle">الركن الثاني وعماد الدين</div>
+            <h1>الأمانة: أساس الثقة وبناء الأمم</h1>
+            <div class="subtitle">درة الأخلاق وميثاق الشرف</div>
         </header>
 
-        <div class="content-section highlight-box">
-            <span class="student-label">مقدم الإذاعة</span>
-            <p><strong>المقدمة:</strong></p>
-            <p>بسم الله الرحمن الرحيم. الحمد لله الذي جعل الصلاة نوراً للمؤمنين، وسكينة للمتقين، والصلاة والسلام على نبينا محمد ﷺ.
+        <div class="section-box intro-box">
+            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">المقدمة:</p>
+            <p>بسم الله الرحمن الرحيم. الحمد لله الذي أمر بأداء الأمانات، وجعلها سمة للمؤمنين الصادقين، والصلاة والسلام على "الصادق الأمين"، نبينا محمد ﷺ.
             مديرنا الفاضل، معلمينا الكرام، زملائي الطلاب.. السلام عليكم ورحمة الله وبركاته.
-            نلتقي اليوم لنتحدث عن أعظم الصلات، وعن الموعد الذي يتكرر خمس مرات ليمنحنا القوة والطمأنينة. الصلاة ليست مجرد حركات نؤديها، بل هي معراج الروح، والوقوف الخاشع بين يدي ملك الملوك، وبها يصلح سائر العمل وتستقيم الحياة.</p>
+            حديثنا اليوم عن الجبل الذي أشفقت منه السماوات والأرض، عن الركيزة التي تُبنى عليها المجتمعات وتزدهر بها الحضارات؛ <strong>"الأمانة"</strong>. الأمانة ليست مجرد حفظ للودائع المالية، بل هي منظومة قيم متكاملة تشمل الكلمة، والوقت، والعمل، والعلم، وهي المعيار الحقيقي الذي نقيس به نزاهة الفرد ورقي المجتمع.</p>
         </div>
 
-        <div class="content-section">
-            <span class="student-label">الطالب/ .......................</span>
-            <h2><span class="section-num">1</span> القرآن الكريم</h2>
-            <div class="holy-text">
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">1</span> القرآن الكريم</h2>
+            <div class="quran-text">
                 ﷽<br>
-                {وَأَقِمِ الصَّلَاةَ ۖ إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ ۗ وَلَذِكْرُ اللَّهِ أَكْبَرُ ۗ وَاللَّهُ يَعْلَمُ مَا تَصْنَعُونَ}<br>
-                <small style="font-size: 11pt; color: var(--mid-gray);">[العنكبوت: 45]</small>
+                {إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ ۚ إِنَّ اللَّهَ نِعِمَّا يَعِظُكُم بِهِ ۗ إِنَّ اللَّهَ كَانَ سَمِيعًا بَصِيرًا}<br>
+                <small style="font-size: 12pt; color: var(--mid-gray);">[النساء: 58]</small>
             </div>
         </div>
 
-        <div class="content-section">
-            <span class="student-name">الطالب/ .......................</span>
-            <h2><span class="section-num">2</span> الحديث الشريف</h2>
-            <div class="holy-text" style="font-weight: 700; font-size: 15pt;">
-                عن معاذ بن جبل رضي الله عنه، قال رسول الله ﷺ:<br>
-                «رَأْسُ الأَمْرِ الإِسْلامُ، وَعَمُودُهُ الصَّلاةُ، وَذِرْوَةُ سَنَامِهِ الْجِهَادُ»
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">2</span> الحديث الشريف</h2>
+            <p style="text-align: center;">عن أبي هريرة رضي الله عنه، أن النبي ﷺ قال:</p>
+            <div class="quran-text" style="font-size: 16pt;">
+                «أدِّ الأمانةَ إلى منِ ائتمنكَ، ولا تَخُنْ من خانكَ»
             </div>
-            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt;">(رواه الترمذي وقال حديث حسن صحيح)</p>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt; font-family: 'Tajawal', sans-serif;">(رواه أبو داود والترمذي وصححه الألباني)</p>
         </div>
 
-        <div class="content-section">
-            <span class="student-label">الطالب/ .......................</span>
-            <h2><span class="section-num">3</span> هل تعلم؟ (حقائق وأحكام)</h2>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">3</span> هل تعلم؟ (أبعاد الأمانة)</h2>
             <div class="infographic-grid">
                 <div class="info-card full-width">
-                    <strong>الركن الذي لا يسقط:</strong><br>
-                    أركان الإسلام خمسة، أربعة منها تسقط في حال العذر (كالزكاة لغير المستطيع، والحج لغير القادر، والصوم للمريض والمسافر)، أما <strong>الصلاة فلا تسقط أبدًا</strong>؛ حتى لو كنت مريضًا تُصلى قاعدًا أو بالإيماء، أو في الحرب تُصلى صلاة الخوف، لكنها تبقى واجبة ولا تسقط.
+                    <strong style="font-family: 'Tajawal', sans-serif;">الأمانة الرقمية (الفكرية):</strong><br>
+                    <span style="font-family: 'Amiri', serif;">هل تعلم أن حفظ حقوق الملكية الفكرية، وعدم سرقة جهود الآخرين في الأبحاث والمشاريع، وعدم نشر الشائعات أو انتهاك خصوصية الأفراد في الفضاء الرقمي، يعتبر من صميم الأمانة في العصر الحديث؟</span>
                 </div>
                 <div class="info-card">
-                    <strong>أول المحاسبين:</strong><br>
-                    هل تعلم أن الصلاة هي أول ما يُحاسب عليه العبد يوم القيامة، فإن صلُحت فقد أفلح وأنجح، وإن فسدت فقد خاب وخسر.
+                    <strong style="font-family: 'Tajawal', sans-serif;">أمانة الوقت:</strong><br>
+                    <span style="font-family: 'Amiri', serif;">هل تعلم أن استثمارك لوقت الحصة المدرسية بتركيز، وعدم هدره فيما لا ينفع، هو أداء لأمانة الوقت التي ستُسأل عنها؟</span>
                 </div>
                 <div class="info-card">
-                    <strong>صلة الروح:</strong><br>
-                    هل تعلم أن الصلاة هي العبادة الوحيدة التي فُرضت في السماء السابعة أثناء رحلة الإسراء والمعراج، لعظم مكانتها.
+                    <strong style="font-family: 'Tajawal', sans-serif;">أمانة الكلمة والمجالس:</strong><br>
+                    <span style="font-family: 'Amiri', serif;">هل تعلم أن "المجالس بالأمانة"؟ فحفظ سر صديقك، وعدم إفشاء ما يدور في المجالس الخاصة، هو من أخلاق الرجال الصادقين.</span>
                 </div>
             </div>
         </div>
 
-        <div class="content-section">
-            <span class="student-label">الطالب/ .......................</span>
-            <h2><span class="section-num">4</span> تأملات في الصلاة</h2>
+        <div class="section-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">4</span> ومضات فكرية</h2>
             <div class="infographic-grid">
                 <div class="info-card">
-                    <strong>نور القلوب:</strong><br>
-                    "الصلاة ميزان الإنسان؛ فمن أراد أن يعرف قدره عند الله، فلينظر إلى قدر الصلاة في قلبه".
+                    <span style="font-family: 'Amiri', serif;">"من ضيع الأمانة ورضي بالخيانة، فقد تبرأ من الديانة".</span>
                 </div>
                 <div class="info-card">
-                    <strong>راحة النفس:</strong><br>
-                    "كان النبي ﷺ إذا حزبه أمر أو ضاقت به الدنيا قال: أرحنا بها يا بلال؛ فالراحة الحقيقية في مناجاة الخالق".
+                    <span style="font-family: 'Amiri', serif;">"الأمانة كالثوب الأبيض الناصع، أي بقعة صغيرة تظهر فيه تشوهه بالكامل".</span>
+                </div>
+                <div class="info-card full-width">
+                    <span style="font-family: 'Amiri', serif;">"النجاح الذي يُبنى على الخداع والغش هو مجرد وهم مؤقت، أما النجاح الذي يُبنى على الأمانة والنزاهة فهو مجد دائم لا يسقط".</span>
                 </div>
             </div>
         </div>
 
-        <div class="content-section highlight-box">
-            <span class="student-label">الطالب/ .......................</span>
-            <h2><span class="section-num">5</span> كلمة الصباح (نظام حياة)</h2>
-            <p>زملائي الطلاب.. الصلاة هي الضابط الحقيقي لوقتنا وحياتنا. إن الحفاظ عليها في مواقيتها يعلمنا الانضباط، والالتزام، وترتيب الأولويات. من استطاع أن ينتظم في صلاته، استطاع أن ينظم مستقبله ودراسته.</p>
-            <p>إنها المحطة التي نغسل فيها همومنا وتعبنا الدراسي لنعود بذهن صافٍ ونفس مطمئنة. لا تجعلوها مجرد روتين، بل اجعلوها وقوداً لنجاحكم وتفوقكم، فمن حفظ صلاته حفظه الله ووفقه في سائر أمره. لنعاهد أنفسنا من اليوم أن نكون من مقيمي الصلاة بصدق وخضوع.</p>
+        <div class="section-box intro-box">
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">5</span> كلمة الصباح (أمانة بناء الذات)</h2>
+            <p>زملائي الطلاب.. يظن البعض أن الأمانة تقتصر على إعادة الأموال لأصحابها، وهذا فهم قاصر. أنتم اليوم تحملون أمانة عظيمة؛ وهي "أمانة بناء الذات". الدولة والمدرسة والأسرة قد ائتمنوكم على المستقبل، ووفروا لكم المقاعد وأدوات العلم لكي تكونوا قادة الغد.</p>
+            <p>الغش في الاختبارات ليس مجرد مخالفة لنظام المدرسة، بل هو خيانة لهذه الأمانة وتدمير لأساس الموثوقية. كيف نثق بمهندس بنى علمه على الغش؟ وكيف نأتمن طبيباً لم يستحق شهادته بجهده؟ اجعلوا من النزاهة شعاراً لا تحيدون عنه، فدرجة قليلة بشرف وأمانة، خير من درجة كاملة لا تعكس حقيقتكم. الأمانة هي هويتكم الحقيقية في كل مكان.</p>
         </div>
 
-        <div class="content-section">
-            <p><strong>الدعاء:</strong> اللهم اجعلنا مقيمي الصلاة ومن ذريتنا، ربنا وتقبل دعاء. اللهم ارزقنا الخشوع فيها، واجعلها قرة أعيننا. اللهم آمين.</p>
-            <p><strong>الخاتمة:</strong> في ختام إذاعتنا، نسأل الله أن يتقبل منا صلواتنا وأعمالنا. شكراً لكم على حسن الإنصات، والسلام عليكم ورحمة الله وبركاته.</p>
+        <div class="section-box" style="margin-bottom: 0;">
+            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">الدعاء والخاتمة:</p>
+            <p><strong>الدعاء:</strong> اللهم ارزقنا الأمانة في القول والعمل، وطهر قلوبنا من النفاق، وأعمالنا من الرياء، واجعلنا ممن يحفظون العهود ويؤدون الأمانات. اللهم آمين.</p>
+            <p><strong>الخاتمة:</strong> في الختام، لنجعل الأمانة مقياساً لأفعالنا قبل أقوالنا. نتمنى لكم يوماً دراسياً حافلاً بالصدق والنجاح. والسلام عليكم ورحمة الله وبركاته.</p>
         </div>
 
         <div class="footer-note">
-            تم إعداد هذه الإذاعة لتعزيز الوعي بأهمية الركن الثاني من أركان الإسلام.
+            تم إعداد هذه الإذاعة لتعزيز الوعي بقيمة الأمانة كركيزة أساسية لبناء الفرد والمجتمع.
         </div>
     </div>
 
