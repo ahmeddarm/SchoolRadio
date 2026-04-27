@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبحاث الفقه - 301</title>
+    <style>
+        /* استيراد الخطوط */
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;800&display=swap');
+
+        /* إعدادات الصفحة الأساسية للطباعة */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            background-color: #e9ecef;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* حاوية الـ A4 الثابتة */
+        .page {
+            width: 210mm;
+            height: 297mm; /* ارتفاع ثابت لضمان عدم الخروج من الصفحة */
+            background-color: #fff;
+            margin: 20px 0;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden; /* يمنع أي عنصر من الخروج */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        @media print {
+            body { background-color: #fff; display: block; }
+            .page { margin: 0; box-shadow: none; }
+        }
+
+        /* ---------------------------------------------------
+           1. تصميم أحمد (أنيق ومبسط - Minimalist)
+           --------------------------------------------------- */
+        .theme-1 {
+            font-family: 'Tajawal', sans-serif;
+            border-right: 15mm solid #111;
+            padding: 20mm;
+        }
+        .theme-1 .info { font-size: 11pt; color: #666; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .theme-1 h1 { font-size: 28pt; color: #111; margin-bottom: 5px; font-weight: 800; }
+        .theme-1 .student { font-size: 14pt; color: #444; margin-bottom: 35px; font-weight: 600; }
+        .theme-1 h3 { font-size: 16pt; color: #111; margin: 20px 0 10px 0; border-right: 4px solid #111; padding-right: 10px; }
+        .theme-1 p, .theme-1 ul { font-size: 13pt; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 15px; }
+        .theme-1 ul { padding-right: 25px; }
+
+        /* ---------------------------------------------------
+           2. تصميم محمد مسفر (أكاديمي كلاسيكي - Academic)
+           --------------------------------------------------- */
+        .theme-2 {
+            font-family: 'Amiri', serif;
+            padding: 0;
+            border-top: 15mm solid #1b3a4b;
+        }
+        .theme-2 .content { padding: 20mm; }
+        .theme-2 .header { text-align: center; margin-bottom: 30px; }
+        .theme-2 h1 { font-family: 'Cairo', sans-serif; font-size: 26pt; color: #1b3a4b; margin-bottom: 10px; }
+        .theme-2 .student { font-size: 14pt; color: #555; border-bottom: 1px solid #ccc; display: inline-block; padding-bottom: 5px; }
+        .theme-2 h3 { font-family: 'Cairo', sans-serif; font-size: 15pt; color: #1b3a4b; margin: 25px 0 10px 0; background: #f4f6f8; padding: 5px 10px; }
+        .theme-2 p, .theme-2 ul { font-size: 14pt; line-height: 1.9; color: #222; text-align: justify; margin-bottom: 10px; }
+        .theme-2 ul { padding-right: 25px; }
+
+        /* ---------------------------------------------------
+           3. تصميم يحيى مسفر (إطار تقليدي - Traditional)
+           --------------------------------------------------- */
+        .theme-3 {
+            font-family: 'Amiri', serif;
+            padding: 15mm;
+        }
+        .theme-3 .border-box {
+            border: 2px solid #8b6d43;
+            outline: 1px solid #8b6d43;
+            outline-offset: -5px;
+            height: 100%;
+            padding: 15mm;
+        }
+        .theme-3 .header { text-align: center; color: #8b6d43; font-size: 11pt; margin-bottom: 20px; }
+        .theme-3 h1 { text-align: center; font-size: 26pt; color: #5a4628; margin-bottom: 10px; }
+        .theme-3 .student { text-align: center; font-size: 14pt; color: #5a4628; font-weight: bold; margin-bottom: 30px; }
+        .theme-3 h3 { color: #8b6d43; font-size: 16pt; text-align: center; margin: 20px 0 10px 0; }
+        .theme-3 p, .theme-3 ul { font-size: 14pt; line-height: 1.9; color: #333; text-align: justify; margin-bottom: 10px; }
+        .theme-3 ul { padding-right: 25px; }
+
+        /* ---------------------------------------------------
+           4. تصميم محمد سالم (رسمي مؤسسي - Corporate)
+           --------------------------------------------------- */
+        .theme-4 {
+            font-family: 'Cairo', sans-serif;
+        }
+        .theme-4 .hero { background-color: #2c3e50; color: #fff; padding: 20mm; text-align: right; }
+        .theme-4 .info { font-size: 10pt; opacity: 0.8; margin-bottom: 10px; }
+        .theme-4 h1 { font-size: 26pt; margin-bottom: 5px; font-weight: 800; }
+        .theme-4 .student { font-size: 14pt; color: #3498db; }
+        .theme-4 .content { padding: 15mm 20mm; }
+        .theme-4 .card { background: #f8f9fa; border-right: 4px solid #3498db; padding: 15px; margin-bottom: 15px; }
+        .theme-4 h3 { color: #2c3e50; font-size: 14pt; margin-bottom: 10px; }
+        .theme-4 p, .theme-4 ul { font-size: 12.5pt; line-height: 1.8; color: #444; text-align: justify; }
+        .theme-4 ul { padding-right: 25px; margin-bottom: 10px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="page theme-1">
+        <div class="info">وزارة التعليم | مادة الفقه - 301 | الفصل الدراسي الثاني</div>
+        <h1>أسباب خلاف العلماء</h1>
+        <div class="student">إعداد الطالب: أحمد عبدالله زكور</div>
+        
+        <h3>مقدمة</h3>
+        <p>الحمد لله والصلاة والسلام على رسول الله، أما بعد: قد يلحظ طالب العلم اختلافاً بين الفقهاء في بعض المسائل الفرعية، وهذا الاختلاف ليس ناتجاً عن تشهٍ أو هوى، بل هو اختلاف تنوع ورحمة، مبني على أسس علمية رصينة وأسباب موضوعية اقتضتها طبيعة النصوص الشرعية وسعة اللغة العربية.</p>
+
+        <h3>أبرز أسباب الخلاف</h3>
+        <ul>
+            <li><strong>عدم بلوغ الدليل:</strong> قد يفتي العالم بناءً على ما وصله من أدلة، ويكون هناك نص صحيح لم يبلغه فيجتهد برأيه.</li>
+            <li><strong>الاختلاف في دلالات الألفاظ:</strong> اللغة العربية تحتمل في بعض ألفاظها أكثر من معنى (المشترك اللفظي). مثل كلمة "القرء" التي تُفسر بالحيض والطهر.</li>
+            <li><strong>التباين في ثبوت الدليل:</strong> قد يصل الحديث لعالمين، فيرى أحدهما صحته ويعمل به، والآخر يرى فيه ضعفاً فيلجأ للقياس.</li>
+            <li><strong>التعارض الظاهري للأدلة:</strong> تباين طرق العلماء في الجمع بين النصوص أو القول بالنسخ.</li>
+        </ul>
+
+        <h3>الموقف الصحيح من الخلاف</h3>
+        <p>يتحتم على المسلم احترام العلماء وتقديرهم، والتماس الأعذار لهم؛ فالمصيب منهم له أجران والمخطئ له أجر. كما ينبغي نبذ التعصب المذموم، واتباع الدليل الأقوى متى ما تبين وجه الحق.</p>
+    </div>
+
+    <div class="page theme-2">
+        <div class="content">
+            <div class="header">
+                <div style="font-size: 11pt; color:#666; margin-bottom:10px;">الفصل الدراسي الثاني | فقه 301</div>
+                <h1>الفتوى والاستفتاء</h1>
+                <div class="student">إعداد: محمد مسفر ال مساري القحطاني</div>
+            </div>
+
+            <h3>تمهيد</h3>
+            <p>الفتوى من أهم المناصب الدينية في الإسلام، فهي بيان لحكم الله تعالى. وقد حذر السلف الصالح من التجرؤ على الفتوى بغير علم، لعظم المسؤولية الملقاة على عاتق المفتي الذي يوقع عن رب العالمين.</p>
+
+            <h3>الفرق بين الفتوى والاستفتاء</h3>
+            <ul>
+                <li><strong>الفتوى:</strong> تبيين الحكم الشرعي عن دليل لمن سأل عنه.</li>
+                <li><strong>الاستفتاء:</strong> طلب بيان الحكم الشرعي من العالم به.</li>
+            </ul>
+
+            <h3>شروط المفتي</h3>
+            <p>لا يجوز شرعاً أن يتصدر للفتوى إلا من تحققت فيه شروط دقيقة، أبرزها:</p>
+            <ul>
+                <li><strong>العلم الغزير:</strong> معرفة الكتاب والسنة، ومواضع الإجماع والخلاف.</li>
+                <li><strong>العدالة والتقوى:</strong> أن يكون مشهوراً بالصلاح والورع.</li>
+                <li><strong>فقه الواقع:</strong> الإلمام بحال المستفتي وظروف العصر.</li>
+            </ul>
+
+            <h3>آداب المستفتي</h3>
+            <p>سؤال أهل الذكر الثقات، وتجنب تتبع رخص العلماء، وأن يوضح سؤاله بصدق للمفتي دون إخفاء للحقائق لضمان دقة الحكم.</p>
+        </div>
+    </div>
+
+    <div class="page theme-3">
+        <div class="border-box">
+            <div class="header">وزارة التعليم ◈ فقه 301 ◈ الفصل الثاني</div>
+            <h1>أركان الزواج وشروطه</h1>
+            <div class="student">إعداد الطالب: يحيى مسفر ال مساري القحطاني</div>
+
+            <h3>المقدمة</h3>
+            <p>الزواج في الشريعة الإسلامية ميثاق غليظ، ورباط مقدس يجمع بين الرجل والمرأة لتكوين أسرة صالحة. ولحفظ هذه المؤسسة، وضع الشرع أركاناً لا يقوم العقد إلا بها، وشروطاً لصحته.</p>
+
+            <h3>أركان عقد الزواج</h3>
+            <p>الركن هو الجزء الأساسي من العقد، وأركان النكاح ثلاثة:</p>
+            <ul>
+                <li><strong>الزوجان:</strong> الخاليان من الموانع الشرعية (كالرضاع المحرم).</li>
+                <li><strong>الإيجاب:</strong> اللفظ الصادر من الولي، مثل: "زوجتك ابنتي".</li>
+                <li><strong>القبول:</strong> اللفظ الصادر من الزوج، مثل: "قبلت هذا الزواج".</li>
+            </ul>
+
+            <h3>شروط صحة الزواج</h3>
+            <ul>
+                <li><strong>تعيين الزوجين:</strong> تمييز البنت المخطوبة وتحديدها بالاسم.</li>
+                <li><strong>الرضا:</strong> انتفاء الإكراه، فرضا الطرفين شرط أساسي.</li>
+                <li><strong>الولي:</strong> لقوله ﷺ: "لا نكاح إلا بولي".</li>
+                <li><strong>الإشهاد:</strong> وجود شاهدي عدل على الأقل لضمان إعلان النكاح.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page theme-4">
+        <div class="hero">
+            <div class="info">وزارة التعليم - مادة الفقه (شعبة 301) - الفصل الثاني</div>
+            <h1>تحديد النسل وتنظيمه</h1>
+            <div class="student">الباحث: محمد سالم احمد العبدلي</div>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h3>المقدمة</h3>
+                <p>حث الإسلام على التكاثر لبناء أمة قوية. ولكن مع تطور العصر، ظهرت ممارسات استدعت تدخل المجامع الفقهية للتفريق بين "تحديد النسل" و"تنظيمه".</p>
+            </div>
+
+            <div class="card">
+                <h3>تحليل المصطلحات</h3>
+                <ul>
+                    <li><strong>تحديد النسل:</strong> القطع الكلي للنسل (التعقيم)، أو قانون يفرض عدداً محدداً من الأطفال.</li>
+                    <li><strong>تنظيم النسل:</strong> المباعدة بين فترات الحمل (تأجيل مؤقت) بوسائل مباحة.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>الأحكام الشرعية</h3>
+                <p><strong>أولاً (التحديد):</strong> محرم شرعاً إلا لضرورة طبية قصوى (كخطر محقق على حياة الأم). ولا يجوز للدول فرض قوانين تحدد النسل خشية الفقر.</p>
+                <p><strong>ثانياً (التنظيم):</strong> مباح للزوجين بالاتفاق استخدام وسائل مؤقتة لمنع الحمل لأسباب معتبرة مثل:</p>
+                <ul>
+                    <li>إعطاء الأم مساحة للتعافي الجسدي.</li>
+                    <li>منح الطفل حقه الكامل في الرضاعة (حولين كاملين).</li>
+                    <li>الوقاية من تضرر الأم بسبب أمراض مؤقتة.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

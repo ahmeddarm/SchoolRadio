@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Writing Assignments - Section 301</title>
+    <style>
+        /* Google Fonts for English Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+        /* Print & Page Setup */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            background-color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            padding: 20px 0;
+        }
+
+        /* Fixed A4 Container */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background-color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        @media print {
+            body { background-color: #fff; display: block; padding: 0; }
+            .page { margin: 0; box-shadow: none; }
+        }
+
+        /* ---------------------------------------------------
+           1. Theme: Ahmed Zakkour (Neo-Minimalist / Tech)
+           --------------------------------------------------- */
+        .theme-ahmed {
+            font-family: 'Inter', sans-serif;
+            border-left: 15mm solid #0f172a;
+            padding: 25mm;
+        }
+        .theme-ahmed .meta { font-size: 10pt; color: #64748b; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 30px; }
+        .theme-ahmed h1 { font-size: 26pt; color: #0f172a; font-weight: 800; margin-bottom: 10px; }
+        .theme-ahmed .student { font-size: 14pt; color: #3b82f6; font-weight: 600; margin-bottom: 40px; }
+        .theme-ahmed p { font-size: 13.5pt; line-height: 2; color: #334155; text-align: justify; margin-bottom: 20px; }
+
+        /* ---------------------------------------------------
+           2. Theme: Mohammed Mesfer (Academic Journal)
+           --------------------------------------------------- */
+        .theme-mmesfer {
+            font-family: 'Merriweather', serif;
+            padding: 25mm 20mm;
+            background-color: #fdfdfd;
+        }
+        .theme-mmesfer .header { text-align: center; border-bottom: 1px solid #cbd5e1; padding-bottom: 20px; margin-bottom: 30px; }
+        .theme-mmesfer .meta { font-size: 10pt; color: #475569; font-family: sans-serif; margin-bottom: 15px; }
+        .theme-mmesfer h1 { font-size: 24pt; color: #1e293b; font-weight: 700; margin-bottom: 15px; }
+        .theme-mmesfer .student { font-size: 13pt; font-style: italic; color: #475569; }
+        .theme-mmesfer p { font-size: 13pt; line-height: 2.1; color: #0f172a; text-align: justify; text-indent: 40px; margin-bottom: 15px; }
+
+        /* ---------------------------------------------------
+           3. Theme: Yahya Mesfer (Classic Elegant)
+           --------------------------------------------------- */
+        .theme-yahya {
+            font-family: 'Playfair Display', serif;
+            padding: 15mm;
+            background-color: #fafaf9;
+        }
+        .theme-yahya .inner-border { border: 2px solid #78716c; height: 100%; padding: 20mm 15mm; }
+        .theme-yahya .meta { text-align: center; font-size: 11pt; color: #78716c; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        .theme-yahya h1 { text-align: center; font-size: 28pt; color: #44403c; margin-bottom: 15px; border-bottom: 1px solid #d6d3d1; padding-bottom: 15px; }
+        .theme-yahya .student { text-align: center; font-size: 14pt; color: #57534e; font-weight: 700; margin-bottom: 40px; }
+        .theme-yahya p { font-size: 14pt; line-height: 1.9; color: #292524; text-align: justify; margin-bottom: 20px; }
+
+        /* ---------------------------------------------------
+           4. Theme: Ismail Rashad (Modern Creative)
+           --------------------------------------------------- */
+        .theme-ismail {
+            font-family: 'Poppins', sans-serif;
+        }
+        .theme-ismail .hero { background-color: #14b8a6; color: white; padding: 25mm 20mm 15mm; }
+        .theme-ismail .meta { font-size: 11pt; opacity: 0.9; margin-bottom: 10px; }
+        .theme-ismail h1 { font-size: 28pt; font-weight: 600; margin-bottom: 5px; }
+        .theme-ismail .student { font-size: 14pt; font-weight: 400; }
+        .theme-ismail .content { padding: 20mm; }
+        .theme-ismail p { font-size: 13.5pt; line-height: 1.9; color: #374151; text-align: justify; margin-bottom: 20px; }
+
+        /* ---------------------------------------------------
+           5. Theme: Mohammed Salem (Corporate / Formal)
+           --------------------------------------------------- */
+        .theme-msalem {
+            font-family: 'Roboto', sans-serif;
+            border-top: 15mm solid #dc2626;
+            padding: 20mm;
+        }
+        .theme-msalem .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 3px solid #1f2937; padding-bottom: 15px; margin-bottom: 35px; }
+        .theme-msalem .meta-left { font-size: 11pt; color: #6b7280; }
+        .theme-msalem .student { font-size: 14pt; font-weight: 700; color: #1f2937; text-align: right; }
+        .theme-msalem h1 { font-size: 26pt; color: #111827; margin-bottom: 25px; }
+        .theme-msalem p { font-size: 13.5pt; line-height: 1.8; color: #374151; text-align: justify; margin-bottom: 15px; border-left: 3px solid #e5e7eb; padding-left: 15px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="page theme-ahmed">
+        <div class="meta">English Writing | High School Section 301 | Term 2</div>
+        <h1>Saudi Vision 2030:<br>A Journey Towards the Future</h1>
+        <div class="student">By: Ahmed Abdullah Zakkour</div>
+        <p>Saudi Vision 2030 is a transformative economic and social reform blueprint launched by HRH Crown Prince Mohammed bin Salman. At its core, the vision aims to reduce Saudi Arabia's dependence on oil, diversify its economy, and develop public service sectors such as health, education, infrastructure, recreation, and tourism.</p>
+        <p>The vision focuses on three main pillars: a vibrant society, a thriving economy, and an ambitious nation. Through mega-projects like NEOM, the Red Sea Project, and Qiddiya, the Kingdom is opening its doors to the world and creating entirely new industries.</p>
+        <p>Furthermore, it empowers youth and women, providing them with unprecedented opportunities to participate in the workforce. By fostering innovation, supporting local businesses, and embracing digital transformation, Saudi Arabia is actively building a brighter, sustainable, and prosperous future for the generations to come.</p>
+    </div>
+
+    <div class="page theme-ahmed">
+        <div class="meta">English Writing | High School Section 301 | Term 2</div>
+        <h1>The True Value of Money:<br>Is It Everything?</h1>
+        <div class="student">By: Ahmed Abdullah Zakkour</div>
+        <p>The question of whether money is important is as old as society itself. Undeniably, money is a fundamental necessity in our modern world. It provides us with basic human needs: food, shelter, healthcare, and education. It offers security and the freedom to make choices, significantly reducing the stress related to basic survival.</p>
+        <p>However, while money is crucial for a comfortable life, it is not the ultimate source of happiness. Wealth cannot buy genuine friendships, true love, or a peaceful mind. History and daily life show us many individuals who possess great wealth but suffer from loneliness or poor mental health.</p>
+        <p>People often find the greatest joy in experiences, family relationships, and personal growth rather than in accumulating material possessions. Therefore, money should be viewed as a useful tool to facilitate a good life, not as the final goal of existence.</p>
+    </div>
+
+    <div class="page theme-mmesfer">
+        <div class="header">
+            <div class="meta">Ministry of Education | English Assignment | Sec 301</div>
+            <h1>Saudi Vision 2030: Transforming the Nation</h1>
+            <div class="student">Prepared by: Mohammed Mesfer Al-Massari Al-Qahtani</div>
+        </div>
+        <p>Saudi Vision 2030 represents a bold and ambitious roadmap for the Kingdom's future, introduced by HRH Crown Prince Mohammed bin Salman. This strategic framework was designed to move the country away from its historical reliance on oil revenues and towards a highly diversified, knowledge-based economy.</p>
+        <p>Built upon the pillars of a vibrant society, a thriving economy, and an ambitious nation, the vision touches every aspect of Saudi life. It has significantly enhanced the tourism sector, introduced global entertainment events, and initiated massive infrastructural developments like NEOM.</p>
+        <p>Most importantly, Vision 2030 invests in human capital. By improving the education system and empowering women and youth to take on leadership roles, the Kingdom is ensuring that its citizens are equipped with the skills necessary to compete on a global scale. It is truly a remarkable era of growth and modernization.</p>
+    </div>
+
+    <div class="page theme-mmesfer">
+        <div class="header">
+            <div class="meta">Ministry of Education | English Assignment | Sec 301</div>
+            <h1>Is Money Important in Our Lives?</h1>
+            <div class="student">Prepared by: Mohammed Mesfer Al-Massari Al-Qahtani</div>
+        </div>
+        <p>In today’s fast-paced world, the importance of money cannot be ignored. Money is the medium that allows us to secure our basic necessities, such as a safe place to live, nutritious food, and access to quality healthcare. Without a certain level of financial stability, individuals face constant hardship and anxiety regarding their daily survival.</p>
+        <p>Beyond basic needs, money provides opportunities. It allows us to pursue higher education, travel, and experience different cultures. It acts as a safety net during unexpected emergencies, giving families a sense of security and peace of mind.</p>
+        <p>Nevertheless, it is essential to recognize the limits of wealth. Money can purchase a comfortable bed, but not a good night's sleep; it can buy medicine, but not health. True contentment comes from strong family bonds, a sense of purpose, and inner peace. Money is an important passenger in the journey of life, but it should never be the driver.</p>
+    </div>
+
+    <div class="page theme-yahya">
+        <div class="inner-border">
+            <div class="meta">English Writing • Term Two • Class 301</div>
+            <h1>Saudi Vision 2030</h1>
+            <div class="student">Yahya Mesfer Al-Massari Al-Qahtani</div>
+            <p>Saudi Vision 2030 is a historic initiative that has placed the Kingdom of Saudi Arabia on a fast track toward modernization and economic diversity. Initiated by HRH Crown Prince Mohammed bin Salman, this blueprint aims to harness the country's vast investment power and strategic location connecting three continents.</p>
+            <p>The vision is deeply committed to creating a vibrant society where citizens enjoy a high quality of life. This is evident in the rapid expansion of cultural, entertainment, and sports sectors. The Kingdom is now a global destination for major events, drawing international attention and investment.</p>
+            <p>Economic sustainability is at the heart of this transformation. By developing non-oil sectors such as renewable energy, technology, and tourism, Saudi Arabia is securing its financial future. Through the dedication of its youth, the Kingdom is confidently turning this ambitious vision into a tangible reality.</p>
+        </div>
+    </div>
+
+    <div class="page theme-yahya">
+        <div class="inner-border">
+            <div class="meta">English Writing • Term Two • Class 301</div>
+            <h1>The Importance of Money</h1>
+            <div class="student">Yahya Mesfer Al-Massari Al-Qahtani</div>
+            <p>Money is universally recognized as a critical component of modern existence. It is the tool we use to navigate society, exchange value, and secure our basic standard of living. Having enough money eliminates the desperation associated with poverty and allows individuals to focus on personal development rather than mere survival.</p>
+            <p>Furthermore, financial resources enable us to help others. Through charity and philanthropy, money can be a powerful force for good, building schools, hospitals, and supporting those in need. In this sense, money is incredibly important as an instrument of positive change.</p>
+            <p>However, equating money with happiness is a profound mistake. The pursuit of endless wealth often leads to stress, broken relationships, and a loss of moral values. Ultimately, while we need money to sustain our physical lives, it is love, faith, and human connection that sustain our souls.</p>
+        </div>
+    </div>
+
+    <div class="page theme-ismail">
+        <div class="hero">
+            <div class="meta">Class 301 | Term 2 | English Composition</div>
+            <h1>Saudi Vision 2030:<br>A New Era of Innovation</h1>
+            <div class="student">Student: Ismail Rashad Al-Hudhaifi</div>
+        </div>
+        <div class="content">
+            <p>Saudi Vision 2030 is a pioneering initiative that is reshaping the future of the Kingdom. Launched under the leadership of HRH Crown Prince Mohammed bin Salman, this strategic roadmap aims to unlock the nation's vast potential by reducing its economic reliance on oil and diversifying its income sources into new, dynamic industries.</p>
+            <p>A major focus of this vision is the development of cutting-edge mega-projects, such as NEOM and the Red Sea destination, which are setting new global standards for sustainability, technology, and tourism. Furthermore, the Kingdom is rapidly expanding its entertainment and sports sectors, transforming the country into a global cultural hub.</p>
+            <p>At the heart of Vision 2030 is the Saudi citizen. The plan heavily invests in education and youth empowerment, ensuring that the next generation possesses the skills required for a modern, digital economy. By blending its rich cultural heritage with forward-thinking development, Saudi Arabia is confidently stepping into a prosperous and innovative future.</p>
+        </div>
+    </div>
+
+    <div class="page theme-msalem">
+        <div class="header">
+            <div class="meta-left">Subject: English Writing<br>Term: 2 | Section: 301</div>
+            <div class="student">Mohammed Salem Ahmed Al-Abdali</div>
+        </div>
+        <h1>Saudi Vision 2030:<br>Building a Better Future</h1>
+        <p>Saudi Vision 2030 is an inspiring national plan designed to transform the Kingdom into a global investment powerhouse and a hub connecting Asia, Europe, and Africa. Driven by the leadership of HRH Crown Prince Mohammed bin Salman, the vision seeks to build a prosperous and sustainable future beyond the oil era.</p>
+        <p>One of the most notable achievements of this vision is the remarkable social transformation. Saudi society is experiencing unprecedented cultural growth, with an emphasis on preserving Islamic heritage while embracing modernity. The empowerment of women in the workforce has unlocked half of the nation's potential, driving innovation and productivity.</p>
+        <p>Economically, the country is witnessing the rise of new sectors such as artificial intelligence, green energy, and logistics. By heavily investing in education and technology, Saudi Arabia is successfully preparing a new generation of leaders capable of sustaining this massive growth for decades to come.</p>
+    </div>
+
+    <div class="page theme-msalem">
+        <div class="header">
+            <div class="meta-left">Subject: English Writing<br>Term: 2 | Section: 301</div>
+            <div class="student">Mohammed Salem Ahmed Al-Abdali</div>
+        </div>
+        <h1>Is Money the Key to Happiness?</h1>
+        <p>It is a common saying that "money makes the world go round." Indeed, financial stability is crucial in the modern era. Money provides access to resources that enhance our quality of life. It allows us to live comfortably, pursue our passions, and protect our families from unforeseen crises.</p>
+        <p>Without money, people often face severe limitations and daily struggles. Therefore, striving for financial success through education and hard work is a logical and necessary ambition. It gives individuals a platform to contribute to the economy and support their communities.</p>
+        <p>Despite its importance, money cannot be considered the sole measure of a successful life. True wealth is found in physical health, supportive friends, and a loving family. While money can buy convenience, it cannot buy character or respect. A wise person respects money for the security it provides, but values humanity, ethics, and relationships above all else.</p>
+    </div>
+
+</body>
+</html>
