@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أبحاث الفقه - 301</title>
+    <title>English Essays - Mutaib & Abdulrahman</title>
     <style>
-        /* استيراد الخطوط */
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;800&display=swap');
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;700;900&family=Oswald:wght@500;700&display=swap');
 
-        /* إعدادات الصفحة الأساسية للطباعة */
+        /* Print & Page Setup */
         @page {
             size: A4 portrait;
             margin: 0;
@@ -23,210 +23,149 @@
         }
 
         body {
-            background-color: #e9ecef;
+            background-color: #d1d5db;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px 0;
         }
 
-        /* حاوية الـ A4 الثابتة */
+        /* Fixed A4 Container */
         .page {
             width: 210mm;
-            height: 297mm; /* ارتفاع ثابت لضمان عدم الخروج من الصفحة */
+            height: 297mm;
             background-color: #fff;
-            margin: 20px 0;
+            margin-bottom: 20px;
             position: relative;
             page-break-after: always;
-            overflow: hidden; /* يمنع أي عنصر من الخروج */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         @media print {
-            body { background-color: #fff; display: block; }
+            body { background-color: #fff; display: block; padding: 0; }
             .page { margin: 0; box-shadow: none; }
         }
 
         /* ---------------------------------------------------
-           1. تصميم أحمد (أنيق ومبسط - Minimalist)
+           Theme 1: Mutaib Al-Harbi (Modern Rounded / Soft UI)
            --------------------------------------------------- */
-        .theme-1 {
-            font-family: 'Tajawal', sans-serif;
-            border-right: 15mm solid #111;
+        .theme-mutaib {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f3f4f6;
             padding: 20mm;
         }
-        .theme-1 .info { font-size: 11pt; color: #666; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .theme-1 h1 { font-size: 28pt; color: #111; margin-bottom: 5px; font-weight: 800; }
-        .theme-1 .student { font-size: 14pt; color: #444; margin-bottom: 35px; font-weight: 600; }
-        .theme-1 h3 { font-size: 16pt; color: #111; margin: 20px 0 10px 0; border-right: 4px solid #111; padding-right: 10px; }
-        .theme-1 p, .theme-1 ul { font-size: 13pt; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 15px; }
-        .theme-1 ul { padding-right: 25px; }
-
-        /* ---------------------------------------------------
-           2. تصميم محمد مسفر (أكاديمي كلاسيكي - Academic)
-           --------------------------------------------------- */
-        .theme-2 {
-            font-family: 'Amiri', serif;
-            padding: 0;
-            border-top: 15mm solid #1b3a4b;
-        }
-        .theme-2 .content { padding: 20mm; }
-        .theme-2 .header { text-align: center; margin-bottom: 30px; }
-        .theme-2 h1 { font-family: 'Cairo', sans-serif; font-size: 26pt; color: #1b3a4b; margin-bottom: 10px; }
-        .theme-2 .student { font-size: 14pt; color: #555; border-bottom: 1px solid #ccc; display: inline-block; padding-bottom: 5px; }
-        .theme-2 h3 { font-family: 'Cairo', sans-serif; font-size: 15pt; color: #1b3a4b; margin: 25px 0 10px 0; background: #f4f6f8; padding: 5px 10px; }
-        .theme-2 p, .theme-2 ul { font-size: 14pt; line-height: 1.9; color: #222; text-align: justify; margin-bottom: 10px; }
-        .theme-2 ul { padding-right: 25px; }
-
-        /* ---------------------------------------------------
-           3. تصميم يحيى مسفر (إطار تقليدي - Traditional)
-           --------------------------------------------------- */
-        .theme-3 {
-            font-family: 'Amiri', serif;
-            padding: 15mm;
-        }
-        .theme-3 .border-box {
-            border: 2px solid #8b6d43;
-            outline: 1px solid #8b6d43;
-            outline-offset: -5px;
+        .theme-mutaib .card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20mm 15mm;
             height: 100%;
-            padding: 15mm;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        .theme-3 .header { text-align: center; color: #8b6d43; font-size: 11pt; margin-bottom: 20px; }
-        .theme-3 h1 { text-align: center; font-size: 26pt; color: #5a4628; margin-bottom: 10px; }
-        .theme-3 .student { text-align: center; font-size: 14pt; color: #5a4628; font-weight: bold; margin-bottom: 30px; }
-        .theme-3 h3 { color: #8b6d43; font-size: 16pt; text-align: center; margin: 20px 0 10px 0; }
-        .theme-3 p, .theme-3 ul { font-size: 14pt; line-height: 1.9; color: #333; text-align: justify; margin-bottom: 10px; }
-        .theme-3 ul { padding-right: 25px; }
+        .theme-mutaib .tag {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .theme-mutaib h1 { font-size: 26pt; color: #111827; font-weight: 900; margin-bottom: 10px; line-height: 1.2; }
+        .theme-mutaib .student { font-size: 14pt; color: #6b7280; font-weight: 700; margin-bottom: 30px; }
+        .theme-mutaib p { font-size: 13.5pt; line-height: 1.9; color: #374151; text-align: justify; margin-bottom: 20px; }
 
         /* ---------------------------------------------------
-           4. تصميم محمد سالم (رسمي مؤسسي - Corporate)
+           Theme 2: Abdulrahman Abdullah (Newspaper / Editorial)
            --------------------------------------------------- */
-        .theme-4 {
-            font-family: 'Cairo', sans-serif;
+        .theme-abdulrahman {
+            font-family: 'Lora', serif;
+            background-color: #fffaf0; /* Off-white warm background */
+            padding: 25mm 20mm;
+            border: 10px solid #27272a;
         }
-        .theme-4 .hero { background-color: #2c3e50; color: #fff; padding: 20mm; text-align: right; }
-        .theme-4 .info { font-size: 10pt; opacity: 0.8; margin-bottom: 10px; }
-        .theme-4 h1 { font-size: 26pt; margin-bottom: 5px; font-weight: 800; }
-        .theme-4 .student { font-size: 14pt; color: #3498db; }
-        .theme-4 .content { padding: 15mm 20mm; }
-        .theme-4 .card { background: #f8f9fa; border-right: 4px solid #3498db; padding: 15px; margin-bottom: 15px; }
-        .theme-4 h3 { color: #2c3e50; font-size: 14pt; margin-bottom: 10px; }
-        .theme-4 p, .theme-4 ul { font-size: 12.5pt; line-height: 1.8; color: #444; text-align: justify; }
-        .theme-4 ul { padding-right: 25px; margin-bottom: 10px; }
+        .theme-abdulrahman .header-box {
+            border-bottom: 4px double #27272a;
+            border-top: 4px double #27272a;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .theme-abdulrahman .meta { font-family: 'Oswald', sans-serif; font-size: 11pt; color: #52525b; text-transform: uppercase; letter-spacing: 2px; }
+        .theme-abdulrahman h1 { font-family: 'Oswald', sans-serif; font-size: 32pt; color: #18181b; text-transform: uppercase; margin: 15px 0; line-height: 1.1; }
+        .theme-abdulrahman .student { font-size: 14pt; font-style: italic; color: #3f3f46; }
+        /* Drop cap for the first letter of the first paragraph */
+        .theme-abdulrahman p:first-of-type::first-letter {
+            font-size: 45pt;
+            float: left;
+            margin-right: 10px;
+            line-height: 0.8;
+            color: #18181b;
+            font-family: 'Oswald', sans-serif;
+        }
+        .theme-abdulrahman p { font-size: 13.5pt; line-height: 2; color: #27272a; text-align: justify; margin-bottom: 20px; }
 
     </style>
 </head>
 <body>
 
-    <div class="page theme-1">
-        <div class="info">وزارة التعليم | مادة الفقه - 301 | الفصل الدراسي الثاني</div>
-        <h1>أسباب خلاف العلماء</h1>
-        <div class="student">إعداد الطالب: أحمد عبدالله زكور</div>
+    <div class="page theme-mutaib">
+        <div class="card">
+            <div class="tag">English Composition • Class 301</div>
+            <h1>Saudi Vision 2030:<br>A Blueprint for Tomorrow</h1>
+            <div class="student">Written by: Mutaib Al-Harbi</div>
+            
+            <p>Saudi Vision 2030 is a master plan for the future. Initiated by HRH Crown Prince Mohammed bin Salman, it aims to shift the Kingdom's economy from a heavy reliance on oil to a fully diversified, modern economic framework. This vision brings massive positive changes to the infrastructure, technology, and tourism sectors across the nation.</p>
+            
+            <p>One of the most exciting aspects of this vision is its focus on sustainability and innovation. Through incredible mega-projects such as NEOM, the Red Sea Project, and the Green Saudi Initiative, the Kingdom is proving its commitment to protecting the environment while adopting the latest technologies in renewable energy.</p>
+            
+            <p>Moreover, Vision 2030 places a strong emphasis on empowering the youth. By improving educational systems and creating thousands of new job opportunities, it ensures that young Saudis are well-prepared to lead the country. This vision is not just a plan on paper; it is a rapid, living transformation that is reshaping the nation for a brighter future.</p>
+        </div>
+    </div>
+
+    <div class="page theme-mutaib">
+        <div class="card">
+            <div class="tag">English Composition • Class 301</div>
+            <h1>The Role of Money in Life:<br>Necessity vs. Happiness</h1>
+            <div class="student">Written by: Mutaib Al-Harbi</div>
+            
+            <p>The significance of money in our daily lives is a topic of constant debate. On a basic, practical level, money is absolutely essential. It provides us with the tools for survival: food, clean water, shelter, and medical care. Without a reliable income, individuals face constant stress and are unable to secure a safe environment for themselves and their families.</p>
+            
+            <p>Beyond survival, money offers freedom. It gives people the ability to pursue higher education, travel the world, and invest in their passions. Having financial security means having the power to make choices rather than being forced into difficult situations due to poverty.</p>
+            
+            <p>However, letting money dictate our ultimate happiness is dangerous. Wealth cannot buy genuine loyalty, true friendship, or mental peace. While money is an excellent tool that makes life easier and more comfortable, it should never replace the priceless values of health, love, and human connection.</p>
+        </div>
+    </div>
+
+    <div class="page theme-abdulrahman">
+        <div class="header-box">
+            <div class="meta">Term Two | Section 301 | English Essay</div>
+            <h1>The Dawn of Vision 2030</h1>
+            <div class="student">By Abdulrahman Abdullah</div>
+        </div>
         
-        <h3>مقدمة</h3>
-        <p>الحمد لله والصلاة والسلام على رسول الله، أما بعد: قد يلحظ طالب العلم اختلافاً بين الفقهاء في بعض المسائل الفرعية، وهذا الاختلاف ليس ناتجاً عن تشهٍ أو هوى، بل هو اختلاف تنوع ورحمة، مبني على أسس علمية رصينة وأسباب موضوعية اقتضتها طبيعة النصوص الشرعية وسعة اللغة العربية.</p>
-
-        <h3>أبرز أسباب الخلاف</h3>
-        <ul>
-            <li><strong>عدم بلوغ الدليل:</strong> قد يفتي العالم بناءً على ما وصله من أدلة، ويكون هناك نص صحيح لم يبلغه فيجتهد برأيه.</li>
-            <li><strong>الاختلاف في دلالات الألفاظ:</strong> اللغة العربية تحتمل في بعض ألفاظها أكثر من معنى (المشترك اللفظي). مثل كلمة "القرء" التي تُفسر بالحيض والطهر.</li>
-            <li><strong>التباين في ثبوت الدليل:</strong> قد يصل الحديث لعالمين، فيرى أحدهما صحته ويعمل به، والآخر يرى فيه ضعفاً فيلجأ للقياس.</li>
-            <li><strong>التعارض الظاهري للأدلة:</strong> تباين طرق العلماء في الجمع بين النصوص أو القول بالنسخ.</li>
-        </ul>
-
-        <h3>الموقف الصحيح من الخلاف</h3>
-        <p>يتحتم على المسلم احترام العلماء وتقديرهم، والتماس الأعذار لهم؛ فالمصيب منهم له أجران والمخطئ له أجر. كما ينبغي نبذ التعصب المذموم، واتباع الدليل الأقوى متى ما تبين وجه الحق.</p>
+        <p>Vision 2030 is an unprecedented transformation strategy for Saudi Arabia. Launched under the visionary guidance of HRH Crown Prince Mohammed bin Salman, this framework aims to position the Kingdom as a pioneering global investment powerhouse. It seeks to capitalize on the country's unique strategic location, connecting three continents, and shift the economic focus toward non-oil exports.</p>
+        
+        <p>A central pillar of this grand vision is the creation of a vibrant society. The government has heavily invested in entertainment, arts, and sports, significantly improving the quality of life for citizens and residents alike. Historic sites are being preserved and promoted globally, showing the world the rich cultural heritage of the Arabian Peninsula.</p>
+        
+        <p>Ultimately, Vision 2030 is driven by the ambition of its people. With massive structural reforms and a deep commitment to digital transformation, Saudi Arabia is building an inclusive, modern society. It is an era of immense pride, where traditional values blend perfectly with futuristic innovation.</p>
     </div>
 
-    <div class="page theme-2">
-        <div class="content">
-            <div class="header">
-                <div style="font-size: 11pt; color:#666; margin-bottom:10px;">الفصل الدراسي الثاني | فقه 301</div>
-                <h1>الفتوى والاستفتاء</h1>
-                <div class="student">إعداد: محمد مسفر ال مساري القحطاني</div>
-            </div>
-
-            <h3>تمهيد</h3>
-            <p>الفتوى من أهم المناصب الدينية في الإسلام، فهي بيان لحكم الله تعالى. وقد حذر السلف الصالح من التجرؤ على الفتوى بغير علم، لعظم المسؤولية الملقاة على عاتق المفتي الذي يوقع عن رب العالمين.</p>
-
-            <h3>الفرق بين الفتوى والاستفتاء</h3>
-            <ul>
-                <li><strong>الفتوى:</strong> تبيين الحكم الشرعي عن دليل لمن سأل عنه.</li>
-                <li><strong>الاستفتاء:</strong> طلب بيان الحكم الشرعي من العالم به.</li>
-            </ul>
-
-            <h3>شروط المفتي</h3>
-            <p>لا يجوز شرعاً أن يتصدر للفتوى إلا من تحققت فيه شروط دقيقة، أبرزها:</p>
-            <ul>
-                <li><strong>العلم الغزير:</strong> معرفة الكتاب والسنة، ومواضع الإجماع والخلاف.</li>
-                <li><strong>العدالة والتقوى:</strong> أن يكون مشهوراً بالصلاح والورع.</li>
-                <li><strong>فقه الواقع:</strong> الإلمام بحال المستفتي وظروف العصر.</li>
-            </ul>
-
-            <h3>آداب المستفتي</h3>
-            <p>سؤال أهل الذكر الثقات، وتجنب تتبع رخص العلماء، وأن يوضح سؤاله بصدق للمفتي دون إخفاء للحقائق لضمان دقة الحكم.</p>
+    <div class="page theme-abdulrahman">
+        <div class="header-box">
+            <div class="meta">Term Two | Section 301 | English Essay</div>
+            <h1>Does Wealth Matter?</h1>
+            <div class="student">By Abdulrahman Abdullah</div>
         </div>
-    </div>
-
-    <div class="page theme-3">
-        <div class="border-box">
-            <div class="header">وزارة التعليم ◈ فقه 301 ◈ الفصل الثاني</div>
-            <h1>أركان الزواج وشروطه</h1>
-            <div class="student">إعداد الطالب: يحيى مسفر ال مساري القحطاني</div>
-
-            <h3>المقدمة</h3>
-            <p>الزواج في الشريعة الإسلامية ميثاق غليظ، ورباط مقدس يجمع بين الرجل والمرأة لتكوين أسرة صالحة. ولحفظ هذه المؤسسة، وضع الشرع أركاناً لا يقوم العقد إلا بها، وشروطاً لصحته.</p>
-
-            <h3>أركان عقد الزواج</h3>
-            <p>الركن هو الجزء الأساسي من العقد، وأركان النكاح ثلاثة:</p>
-            <ul>
-                <li><strong>الزوجان:</strong> الخاليان من الموانع الشرعية (كالرضاع المحرم).</li>
-                <li><strong>الإيجاب:</strong> اللفظ الصادر من الولي، مثل: "زوجتك ابنتي".</li>
-                <li><strong>القبول:</strong> اللفظ الصادر من الزوج، مثل: "قبلت هذا الزواج".</li>
-            </ul>
-
-            <h3>شروط صحة الزواج</h3>
-            <ul>
-                <li><strong>تعيين الزوجين:</strong> تمييز البنت المخطوبة وتحديدها بالاسم.</li>
-                <li><strong>الرضا:</strong> انتفاء الإكراه، فرضا الطرفين شرط أساسي.</li>
-                <li><strong>الولي:</strong> لقوله ﷺ: "لا نكاح إلا بولي".</li>
-                <li><strong>الإشهاد:</strong> وجود شاهدي عدل على الأقل لضمان إعلان النكاح.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="page theme-4">
-        <div class="hero">
-            <div class="info">وزارة التعليم - مادة الفقه (شعبة 301) - الفصل الثاني</div>
-            <h1>تحديد النسل وتنظيمه</h1>
-            <div class="student">الباحث: محمد سالم احمد العبدلي</div>
-        </div>
-
-        <div class="content">
-            <div class="card">
-                <h3>المقدمة</h3>
-                <p>حث الإسلام على التكاثر لبناء أمة قوية. ولكن مع تطور العصر، ظهرت ممارسات استدعت تدخل المجامع الفقهية للتفريق بين "تحديد النسل" و"تنظيمه".</p>
-            </div>
-
-            <div class="card">
-                <h3>تحليل المصطلحات</h3>
-                <ul>
-                    <li><strong>تحديد النسل:</strong> القطع الكلي للنسل (التعقيم)، أو قانون يفرض عدداً محدداً من الأطفال.</li>
-                    <li><strong>تنظيم النسل:</strong> المباعدة بين فترات الحمل (تأجيل مؤقت) بوسائل مباحة.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>الأحكام الشرعية</h3>
-                <p><strong>أولاً (التحديد):</strong> محرم شرعاً إلا لضرورة طبية قصوى (كخطر محقق على حياة الأم). ولا يجوز للدول فرض قوانين تحدد النسل خشية الفقر.</p>
-                <p><strong>ثانياً (التنظيم):</strong> مباح للزوجين بالاتفاق استخدام وسائل مؤقتة لمنع الحمل لأسباب معتبرة مثل:</p>
-                <ul>
-                    <li>إعطاء الأم مساحة للتعافي الجسدي.</li>
-                    <li>منح الطفل حقه الكامل في الرضاعة (حولين كاملين).</li>
-                    <li>الوقاية من تضرر الأم بسبب أمراض مؤقتة.</li>
-                </ul>
-            </div>
-        </div>
+        
+        <p>Is money truly important? The simple and realistic answer is yes. In our contemporary society, money serves as the foundation for a stable and secure life. It removes the daily anxieties of survival by ensuring that we can afford adequate housing, nutrition, and emergency medical treatments. It is the key that opens the door to basic human dignity.</p>
+        
+        <p>Furthermore, financial resources allow individuals to contribute positively to society. Those with wealth have the unique opportunity to build businesses, create jobs, and fund charitable organizations. In this light, money is a powerful instrument that can be used to uplift communities and support those in desperate need.</p>
+        
+        <p>Nevertheless, money is merely a facilitator, not a creator of true joy. There are countless examples of wealthy individuals who suffer from isolation and unhappiness. True fulfillment comes from living a life of purpose, nurturing family bonds, and maintaining a clear conscience. Money can make the journey smoother, but it cannot buy the destination.</p>
     </div>
 
 </body>
