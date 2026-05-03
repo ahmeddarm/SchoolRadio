@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0063)file:///C:/Users/darmz/Downloads/gemini-code-1777773852464.html -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة مدرسية - حسن التعامل مع الآخرين</title>
+    <title>إذاعة مدرسية - الانتماء للوطن</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
 
         :root {
-            /* Monochrome / Neutral Palette */
+            /* Monochrome / National Neutral Palette */
             --black: #111111;
+            --primary-color: #1b5e20; /* أخضر وطني داكن يعكس الهوية والرسوخ */
             --dark-gray: #333333;
             --mid-gray: #666666;
-            --light-gray: #f4f5f7;
+            --light-gray: #f4f8f5; 
             --border-color: #e0e0e0;
             --white: #ffffff;
         }
@@ -35,7 +36,7 @@
             padding: 20mm;
             box-sizing: border-box;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 10px solid var(--black);
+            border-top: 10px solid var(--primary-color);
         }
 
         /* Typography & Hierarchy */
@@ -47,7 +48,7 @@
         }
 
         h1 {
-            color: var(--black);
+            color: var(--primary-color);
             font-size: 28pt;
             font-weight: 800;
             letter-spacing: -0.5px;
@@ -63,7 +64,7 @@
         }
 
         h2 {
-            color: var(--black);
+            color: var(--primary-color);
             font-size: 16pt;
             font-weight: 700;
             display: flex;
@@ -73,7 +74,7 @@
         }
 
         .section-number {
-            background-color: var(--black);
+            background-color: var(--primary-color);
             color: var(--white);
             width: 30px;
             height: 30px;
@@ -97,15 +98,15 @@
 
         .intro-box {
             background-color: var(--light-gray);
-            border-right: 4px solid var(--black);
+            border-right: 4px solid var(--primary-color);
             border-left: none; border-top: none; border-bottom: none;
         }
 
         .student-badge {
             background-color: var(--light-gray);
-            color: var(--mid-gray);
+            color: var(--primary-color);
             font-size: 11pt;
-            font-weight: 500;
+            font-weight: 600;
             padding: 4px 10px;
             border-radius: 20px;
             position: absolute;
@@ -126,7 +127,7 @@
             font-size: 18pt;
             font-weight: 700;
             text-align: center;
-            color: var(--black);
+            color: var(--primary-color);
             margin: 15px 0;
             line-height: 1.8;
         }
@@ -148,7 +149,7 @@
 
         .full-width {
             grid-column: 1 / -1;
-            border-right: 4px solid var(--black);
+            border-right: 4px solid var(--primary-color);
             background-color: var(--white);
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
@@ -167,7 +168,7 @@
         /* Print Optimization */
         @media print {
             body { background-color: var(--white); padding: 0; margin: 0; }
-            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid var(--black); }
+            .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid var(--primary-color); }
             .section-box, .info-card, .intro-box, .student-badge { 
                 -webkit-print-color-adjust: exact; 
                 print-color-adjust: exact; 
@@ -179,91 +180,97 @@
 
     <div class="container">
         <header>
-            <h1>بروتوكول التواصل الإنساني</h1>
-            <div class="subtitle">فن التعامل مع الآخرين، الذكاء العاطفي، وبناء العلاقات</div>
+            <h1>الانتماء للوطن: هوية وبناء</h1>
+            <div class="subtitle">المواطنة الحقيقية بين عمق المشاعر وواقع المنجزات</div>
         </header>
 
+        <!-- المقدمة -->
         <div class="section-box intro-box">
-            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">المقدمة:</p>
-            <p>بسم الله الرحمن الرحيم. الحمد لله الذي ألف بين القلوب، وجعل الكلمة الطيبة صدقة، والصلاة والسلام على نبينا محمد ﷺ، ألين الناس طبعاً وأحسنهم خلقاً وتعاملاً.
+            <p style="font-family: &#39;Tajawal&#39;, sans-serif; font-weight: 700; margin-bottom: 10px;">المقدمة:</p>
+            <p>بسم الله الرحمن الرحيم. الحمد لله الذي جعل حب الأوطان غريزة في النفوس الفطرية، والصلاة والسلام على نبينا محمد ﷺ الذي ضرب أروع الأمثلة في الوفاء لمسقط رأسه وموطن هجرته.
             مديرنا الفاضل، معلمينا الكرام، زملائي الطلاب.. السلام عليكم ورحمة الله وبركاته.
-            موضوعنا اليوم هو المفتاح الذي تُفتح به الأبواب المغلقة، وتُبنى به جسور الثقة؛ نتحدث اليوم عن <strong>"حسن التعامل مع الآخرين"</strong>. في عالم شديد الترابط، لا يمكن لأي فرد أن ينجح أو يرتقي في معزل عن الناس. حسن التعامل ليس مجرد مجاملات عابرة، بل هو فن، ومهارة، وعبادة نتقرب بها إلى الله.</p>
+            نجتمع اليوم لنتحدث عن الجذور التي تثبتنا، والمظلة التي تظلنا؛ نتحدث عن <strong>"الانتماء للوطن"</strong>. الانتماء ليس مجرد شعار يُرفع في المناسبات، بل هو التزام عميق، وعمل دؤوب، ومسؤولية نحملها على عواتقنا لنكون جزءاً فاعلاً في بناء حضارة هذا الكيان الشامخ.</p>
         </div>
 
+        <!-- القرآن الكريم -->
         <div class="section-box">
             <span class="student-badge">الطالب/ .......................</span>
             <h2><span class="section-number">1</span> القرآن الكريم</h2>
             <div class="quran-text">
                 ﷽<br>
-                {وَلَا تَسْتَوِي الْحَسَنَةُ وَلَا السَّيِّئَةُ ۚ ادْفَعْ بِالَّتِي هِيَ أَحْسَنُ فَإِذَا الَّذِي بَيْنَكَ وَبَيْنَهُ عَدَاوَةٌ كَأَنَّهُ وَلِيٌّ حَمِيمٌ}<br>
-                <small style="font-size: 12pt; color: var(--mid-gray);">[فصلت: 34]</small>
+                {وَإِذْ قَالَ إِبْرَاهِيمُ رَبِّ اجْعَلْ هَٰذَا بَلَدًا آمِنًا وَارْزُقْ أَهْلَهُ مِنَ الثَّمَرَاتِ مَنْ آمَنَ مِنْهُم بِاللَّهِ وَالْيَوْمِ الْآخِرِ}<br>
+                <small style="font-size: 12pt; color: var(--mid-gray);">[البقرة: 126]</small>
             </div>
-            <p style="text-align: center; color: var(--mid-gray); font-size: 12pt; font-family: 'Tajawal', sans-serif;">قاعدة قرآنية عظيمة تبرز القوة التحويلية الهائلة للتعامل الراقي في كسب القلوب وإذابة الخلافات.</p>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 12pt; font-family: &#39;Tajawal&#39;, sans-serif;">دعوة إبراهيمية خالدة تربط بين استقرار الأوطان والأمن والرخاء.</p>
         </div>
 
+        <!-- الحديث الشريف -->
         <div class="section-box">
             <span class="student-badge">الطالب/ .......................</span>
             <h2><span class="section-number">2</span> الحديث الشريف</h2>
-            <p style="text-align: center;">عن عبد الله بن عمرو رضي الله عنهما، قال رسول الله ﷺ:</p>
+            <p style="text-align: center;">عن عبد الله بن عباس رضي الله عنهما، أن النبي ﷺ قال لمكة وهو يودعها:</p>
             <div class="quran-text" style="font-size: 17pt;">
-                «إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلَاقًا»
+                «مَا أَطْيَبَكِ مِنْ بَلَدٍ، وَأَحَبَّكِ إِلَيَّ، وَلَوْلَا أَنَّ قَوْمِي أَخْرَجُونِي مِنْكِ مَا سَكَنْتُ غَيْرَكِ»
             </div>
-            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt; font-family: 'Tajawal', sans-serif;">(متفق عليه)</p>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt; font-family: &#39;Tajawal&#39;, sans-serif;">(رواه الترمذي وصححه الألباني)</p>
         </div>
 
+        <!-- هل تعلم - Infographic Style -->
         <div class="section-box">
             <span class="student-badge">الطالب/ .......................</span>
-            <h2><span class="section-number">3</span> هل تعلم؟ (المهارات الناعمة والذكاء العاطفي)</h2>
+            <h2><span class="section-number">3</span> هل تعلم؟ (أبعاد الانتماء الوطني)</h2>
             <div class="infographic-grid">
                 <div class="info-card full-width">
-                    <strong style="font-family: 'Tajawal', sans-serif;">معيار النجاح المهني (Soft Skills):</strong><br>
-                    <span style="font-family: 'Amiri', serif;">هل تعلم أن دراسات حديثة أثبتت أن 85% من أسباب النجاح في الوظائف والحياة تعود إلى "المهارات الناعمة" (كالذكاء العاطفي والقدرة على التعامل مع الناس وفهمهم)، بينما تساهم المهارات التقنية والأكاديمية بـ 15% فقط؟</span>
+                    <strong style="font-family: &#39;Tajawal&#39;, sans-serif;">التمثيل المشرّف:</strong><br>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">هل تعلم أن كل فرد منا هو سفير لوطنه؟ تمثيلك لبلدك بأخلاقك العالية، واحترامك للآخرين، وتفوقك في المحافل والمشاركات، هو من أسمى درجات الانتماء الوطني.</span>
                 </div>
                 <div class="info-card">
-                    <strong style="font-family: 'Tajawal', sans-serif;">عدوى الإيجابية:</strong><br>
-                    <span style="font-family: 'Amiri', serif;">هل تعلم أن الابتسامة والمعاملة الحسنة تنشط ما يُعرف بـ "الخلايا العصبية المرآتية" في دماغ الشخص المقابل، مما يجعله يعكس نفس السلوك الإيجابي تلقائياً؟</span>
+                    <strong style="font-family: &#39;Tajawal&#39;, sans-serif;">الانتماء الفعال:</strong><br>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">هل تعلم أن الأمم المتقدمة تقيس "وطنية" شبابها بمدى إنتاجيتهم وحرصهم على التحصيل العلمي لسد احتياجات مجتمعهم والمساهمة في بناء نهضته؟</span>
                 </div>
                 <div class="info-card">
-                    <strong style="font-family: 'Tajawal', sans-serif;">جدار الحماية النفسي:</strong><br>
-                    <span style="font-family: 'Amiri', serif;">هل تعلم أن "التغافل" وحسن الظن هما بمثابة جدار حماية (Firewall) يقي علاقاتك من فيروسات سوء الفهم والمشاحنات اليومية؟</span>
+                    <strong style="font-family: &#39;Tajawal&#39;, sans-serif;">الحفاظ على المكتسبات:</strong><br>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">هل تعلم أن المحافظة على الممتلكات العامة واحترام الأنظمة هي من أبسط وأصدق صور الانتماء الحقيقي للوطن؟</span>
                 </div>
             </div>
         </div>
 
+        <!-- حكم وأقوال -->
         <div class="section-box">
             <span class="student-badge">الطالب/ .......................</span>
             <h2><span class="section-number">4</span> ومضات فكرية</h2>
             <div class="infographic-grid">
                 <div class="info-card">
-                    <span style="font-family: 'Amiri', serif;">علي بن أبي طالب رضي الله عنه: "خَالِطُوا النَّاسَ مُخَالَطَةً إِنْ مِتُّمْ مَعَهَا بَكَوْا عَلَيْكُمْ، وَإِنْ عِشْتُمْ حَنُّوا إِلَيْكُمْ".</span>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">"الوطن شجرة طيبة لا تنمو وتترعرع إلا في تربة التضحيات والعمل الجاد المخلص."</span>
                 </div>
                 <div class="info-card">
-                    <span style="font-family: 'Amiri', serif;">"الاحترام لا يكلف شيئاً، لكنه يشتري كل شيء في عالم العلاقات الإنسانية."</span>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">"الوطن ليس مجرد أرض نعيش عليها، بل هو هوية تسكن فينا، وأمانة في أعناقنا نسلمها للأجيال القادمة."</span>
                 </div>
                 <div class="info-card full-width">
-                    <span style="font-family: 'Amiri', serif;">"المعاملة الحسنة هي جواز السفر الذي يسمح لك بالعبور إلى قلوب الآخرين وعقولهم دون الحاجة إلى تأشيرة."</span>
+                    <span style="font-family: &#39;Amiri&#39;, serif;">"ليس الانتماء أن تسأل ماذا قدم لي الوطن، بل أن تسأل نفسك وتعمل ليل نهار للإجابة على: ماذا أضفت أنا لرصيد هذا الوطن؟"</span>
                 </div>
             </div>
         </div>
 
+        <!-- كلمة الصباح -->
         <div class="section-box intro-box">
-            <span class="student-badge">الطالب/ أحمد عبدالله زكور</span>
-            <h2><span class="section-number">5</span> كلمة الصباح (بروتوكولات الاتصال)</h2>
-            <p>زملائي الطلاب.. في عالم الشبكات والأنظمة البرمجية، لا يمكن لأي جهازين أن يتواصلا ويتبادلا البيانات بشكل صحيح ومستقر إلا بوجود "بروتوكول" (Protocol) يحدد لغة التخاطب ويضمن سلامة الإرسال والاستقبال. في حياتنا اليومية، "حسن التعامل" هو بروتوكول الاتصال البشري الأهم على الإطلاق.</p>
-            <p>ونحن نستعد للتخرج من ثانوية الأمير مقرن بن عبدالعزيز، والانتقال إلى البيئة الجامعية والعملية، يجب أن ندرك أن مهاراتك التقنية أو معدلك المرتفع قد يفتحان لك باب المقابلة، ولكن أسلوبك في الحوار، واحترامك لاختلافات الآخرين، وقدرتك على العمل ضمن فريق، هي ما سيضمن استمرارك وبناء شبكة علاقات قوية. اجعلوا من الكلمة الطيبة، والإنصات الجيد، والتغافل عن الزلات، نظاماً ثابتاً في تعاملاتكم؛ فالأنظمة المستقرة والموثوقة هي وحدها التي تصمد في وجه التحديات.</p>
+            <span class="student-badge">الطالب/ .......................</span>
+            <h2><span class="section-number">5</span> كلمة الصباح (بناة الغد)</h2>
+            <p>زملائي الطلاب.. ونحن في محطتنا الأخيرة من المرحلة الثانوية، نقف على أعتاب مرحلة جديدة تتطلب منا وعياً حقيقياً بمفهوم الانتماء. حب الوطن ليس مجرد مشاعر في القلوب أو عبارات نرددها، بل هو عمل جاد ومسؤولية حقيقية.</p>
+            <p>الانتماء الحقيقي هو أن تجتهد في مقعدك الدراسي اليوم، لتكون غداً طبيباً يعالج أبناء وطنه، أو معلماً يربي أجياله، أو مهندساً يساهم في عمارته، أو إدارياً يحفظ مقدراته. الوطن يعقد علينا آمالاً كبيرة، والمواطنة الصالحة تكمن في الجدية، وتطوير الذات، والالتزام بالأخلاق والقيم. دعونا نترجم حبنا لبلادنا إلى تفوق أكاديمي وسلوك حضاري، لنكون سواعد تبني وأثراً جميلاً يبقى.</p>
         </div>
 
+        <!-- الخاتمة والدعاء -->
         <div class="section-box" style="margin-bottom: 0;">
-            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">الدعاء والخاتمة:</p>
-            <p><strong>الدعاء:</strong> اللهم اهدنا لأحسن الأخلاق والأعمال، لا يهدي لأحسنها إلا أنت. اللهم ألف بين قلوبنا، وأصلح ذات بيننا، واجعلنا مفاتيح للخير مغاليق للشر. اللهم آمين.</p>
-            <p><strong>الخاتمة:</strong> في الختام.. تذكروا أن كل شخص تلتقونه يخوض معركة لا تعرفون عنها شيئاً، فكونوا لطفاء دائماً. نتمنى لكم يوماً دراسياً هادئاً ومثمراً، والسلام عليكم ورحمة الله وبركاته.</p>
+            <p style="font-family: &#39;Tajawal&#39;, sans-serif; font-weight: 700; margin-bottom: 10px;">الدعاء والخاتمة:</p>
+            <p><strong>الدعاء:</strong> اللهم احفظ بلادنا من كل سوء ومكروه، وأدم عليها نعمة الأمن والأمان والرخاء. اللهم وفق قادتنا لما فيه خير البلاد والعباد، واجعلنا شباباً نافعين لوطننا وأمتنا. اللهم آمين.</p>
+            <p><strong>الخاتمة:</strong> في الختام.. لنكن أوفياء لوطن أعطانا الكثير، ولنجعل من إنجازاتنا وتفوقنا أقل هدية نرد بها بعضاً من جميله. نتمنى لكم يوماً حافلاً بالجد والعطاء، والسلام عليكم ورحمة الله وبركاته.</p>
         </div>
 
         <div class="footer-note">
-            تم إعداد هذه الإذاعة لتعزيز الذكاء العاطفي ومهارات التواصل الإنساني الفعال.
+            تم إعداد هذه الإذاعة لتعزيز الوعي الوطني وربط طموحات الطلاب بمستقبل الوطن.
         </div>
     </div>
 
-</body>
-</html>
 
+</body></html>
