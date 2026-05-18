@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة مدرسية - العفة وحفظ الفرج</title>
+    <title>إذاعة مدرسية - التوكل والأخذ بالأسباب</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+        /* خطوط واضحة للقراءة، وخط أصيل للقرآن */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
 
         :root {
-            /* Monochrome / Dignified Purity Palette */
+            /* Monochrome / Action & Focus Palette */
             --black: #111111;
-            --primary-color: #1a237e; /* أزرق ملكي داكن يعكس الوقار، النقاء، والسمو الروحي */
-            --dark-gray: #333333;
-            --mid-gray: #666666;
-            --light-gray: #e8eaf6; /* خلفية زرقاء باهتة جداً ومريحة للعين */
-            --border-color: #c5cae9;
+            --primary-color: #0277bd; /* أزرق محيطي يعكس الوضوح، النشاط، والثقة */
+            --dark-gray: #222222;
+            --mid-gray: #555555;
+            --light-gray: #e1f5fe; 
+            --border-color: #b3e5fc;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', Arial, sans-serif;
             background-color: #e9ecef;
             margin: 0;
             padding: 20px;
             color: var(--dark-gray);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
@@ -49,24 +50,23 @@
 
         h1 {
             color: var(--primary-color);
-            font-size: 28pt;
+            font-size: 26pt;
             font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 5px;
-            text-transform: uppercase;
         }
 
         .subtitle {
             color: var(--mid-gray);
-            font-size: 14pt;
-            font-weight: 400;
+            font-size: 15pt;
+            font-weight: 600;
             margin-top: 5px;
         }
 
         h2 {
             color: var(--primary-color);
-            font-size: 16pt;
-            font-weight: 700;
+            font-size: 17pt;
+            font-weight: 800;
             display: flex;
             align-items: center;
             margin-top: 0;
@@ -76,14 +76,15 @@
         .section-number {
             background-color: var(--primary-color);
             color: var(--white);
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             border-radius: 4px; 
-            font-size: 14pt;
+            font-size: 15pt;
             margin-left: 10px;
+            font-weight: 800;
         }
 
         /* Structured Layout / Infographic Style */
@@ -98,16 +99,16 @@
 
         .intro-box {
             background-color: var(--light-gray);
-            border-right: 4px solid var(--primary-color);
+            border-right: 5px solid var(--primary-color);
             border-left: none; border-top: none; border-bottom: none;
         }
 
         .student-badge {
             background-color: var(--light-gray);
             color: var(--primary-color);
-            font-size: 11pt;
-            font-weight: 600;
-            padding: 4px 10px;
+            font-size: 12pt;
+            font-weight: 800;
+            padding: 5px 12px;
             border-radius: 20px;
             position: absolute;
             top: 20px;
@@ -116,20 +117,24 @@
         }
 
         p {
-            font-family: 'Amiri', serif;
-            font-size: 14pt;
+            font-size: 15pt;
+            font-weight: 600;
             margin: 0 0 10px 0;
             text-align: justify;
         }
 
+        /* خط القرآن والحديث (Amiri) */
         .quran-text {
             font-family: 'Amiri', serif;
-            font-size: 17pt;
+            font-size: 18pt;
             font-weight: 700;
             text-align: center;
             color: var(--primary-color);
             margin: 15px 0;
             line-height: 1.8;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
         }
 
         /* Grid System */
@@ -143,8 +148,9 @@
             background-color: var(--light-gray);
             padding: 15px;
             border-radius: 4px;
-            font-size: 12.5pt;
-            border-right: 3px solid var(--mid-gray);
+            font-size: 13.5pt;
+            font-weight: 600;
+            border-right: 4px solid var(--mid-gray);
         }
 
         .full-width {
@@ -162,14 +168,15 @@
             border-top: 1px solid var(--border-color);
             padding-top: 15px;
             color: var(--mid-gray);
-            font-size: 11pt;
+            font-size: 12pt;
+            font-weight: 600;
         }
 
         /* Print Optimization */
         @media print {
             body { background-color: var(--white); padding: 0; margin: 0; }
             .container { width: 100%; box-shadow: none; padding: 15mm; border-top: 10px solid var(--primary-color); }
-            .section-box, .info-card, .intro-box, .student-badge { 
+            .section-box, .info-card, .intro-box, .student-badge, .quran-text { 
                 -webkit-print-color-adjust: exact; 
                 print-color-adjust: exact; 
             }
@@ -180,16 +187,16 @@
 
     <div class="container">
         <header>
-            <h1>العفة وطهارة النفس</h1>
-            <div class="subtitle">حفظ الجوارح.. الدرع الحصين لكرامة الإنسان وإيمانه</div>
+            <h1>وهم التواكل والأخذ بالأسباب</h1>
+            <div class="subtitle">بين الإيمان الحقيقي بالقدر، وفخ الكسل والمقارنات المحبطة</div>
         </header>
 
         <!-- المقدمة -->
         <div class="section-box intro-box">
-            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">المقدمة:</p>
-            <p>بسم الله الرحمن الرحيم. الحمد لله الذي شرع لنا من الدين ما يزكي نفوسنا ويطهر قلوبنا، والصلاة والسلام على نبينا محمد ﷺ الذي كان أشد حياءً من العذراء في خدرها.
+            <p style="color: var(--primary-color); font-weight: 800; margin-bottom: 10px;">المقدمة:</p>
+            <p>بسم الله الرحمن الرحيم. الحمد لله الذي أمرنا بالعمل ووعدنا بالجزاء، والصلاة والسلام على نبينا محمد ﷺ الذي علمنا كيف نجمع بين قوة اليقين وصدق العمل.
             مديرنا الفاضل، معلمينا الكرام، زملائي الطلاب.. السلام عليكم ورحمة الله وبركاته.
-            حديثنا اليوم عن مرتبة عالية من مراتب الرجولة وقوة الشخصية؛ إنها <strong>"العفة وحفظ الفرج"</strong>. في زمن كثرت فيه المغريات وتلاشت فيه بعض الحدود، تبرز قيمة المسلم الحقيقية في قدرته على كبح جماح نفسه، واحترام جسده، ومراقبة ربه في السر والعلن.</p>
+            موضوعنا اليوم يعالج فكرة سلبية قد تتسلل لعقولنا في أوقات الضغط والتعب؛ وهي فكرة "التواكل" أو الاستسلام التام بحجة أن "كل شيء مكتوب ومقدر"، وما يتبعها من مقارنات محبطة تقتل الطموح قبل أن يبدأ.</p>
         </div>
 
         <!-- القرآن الكريم -->
@@ -198,21 +205,20 @@
             <h2><span class="section-number">1</span> القرآن الكريم</h2>
             <div class="quran-text">
                 ﷽<br>
-                {قُل لِّلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ وَيَحْفَظُوا فُرُوجَهُمْ ۚ ذَٰلِكَ أَزْكَىٰ لَهُمْ ۗ إِنَّ اللَّهَ خَبِيرٌ بِمَا يَصْنَعُونَ}<br>
-                <small style="font-size: 12pt; color: var(--mid-gray);">[النور: 30]</small>
+                {وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ * وَأَنَّ سَعْيَهُ سَوْفَ يُرَىٰ}
             </div>
-            <p style="text-align: center; color: var(--mid-gray); font-size: 12pt; font-family: 'Tajawal', sans-serif;">آية محكمة قدمت "غض البصر" على "حفظ الفرج"، لأن النظرة هي الباب الأول الذي يعبر منه الخطر.</p>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 13pt;">[النجم: 39-40] - قاعدة ربانية واضحة: نتيجتك وحصادك مرتبطان مباشرة بمدى سعيك وجهدك.</p>
         </div>
 
         <!-- الحديث الشريف -->
         <div class="section-box">
             <span class="student-badge">الطالب/ .......................</span>
             <h2><span class="section-number">2</span> الحديث الشريف</h2>
-            <p style="text-align: center;">عن سهل بن سعد رضي الله عنه، عن النبي ﷺ قال:</p>
-            <div class="quran-text" style="font-size: 17pt;">
-                «مَنْ يَضْمَنْ لِي مَا بَيْنَ لَحْيَيْهِ وَمَا بَيْنَ رِجْلَيْهِ أَضْمَنْ لَهُ الجَنَّةَ»
+            <p style="text-align: center;">عن أبي هريرة رضي الله عنه، قال رسول الله ﷺ:</p>
+            <div class="quran-text">
+                «احْرِصْ عَلَى مَا يَنْفَعُكَ، وَاسْتَعِنْ بِاللَّهِ وَلَا تَعْجِزْ»
             </div>
-            <p style="text-align: center; color: var(--mid-gray); font-size: 11pt; font-family: 'Tajawal', sans-serif;">(رواه البخاري) - <small>والمقصود اللسان والفرج؛ دلالة على أنهما أكبر أبواب الفتن.</small></p>
+            <p style="text-align: center; color: var(--mid-gray); font-size: 13pt;">(رواه مسلم) - نهي صريح عن العجز والكسل، وأمر بالحرص والعمل مع الاعتماد على الله.</p>
         </div>
 
         <!-- هل تعلم - Infographic Style -->
@@ -221,16 +227,16 @@
             <h2><span class="section-number">3</span> هل تعلم؟ (حقائق مباشرة)</h2>
             <div class="infographic-grid">
                 <div class="info-card full-width">
-                    <strong style="font-family: 'Tajawal', sans-serif;">خط الدفاع الأول:</strong>
-                    <span style="font-family: 'Amiri', serif;"> هل تعلم أن "غض البصر" هو خط الدفاع الأول والأهم لحفظ الفرج وطهارة القلب؟</span>
+                    <strong style="color: var(--primary-color);">السعي جزء من القدر:</strong>
+                    <span> هل تعلم أن "الأخذ بالأسباب والمذاكرة" هي بحد ذاتها من القدر الذي فرضه الله لتصل إلى النجاح؟</span>
                 </div>
                 <div class="info-card">
-                    <strong style="font-family: 'Tajawal', sans-serif;">الاختبار الحقيقي:</strong>
-                    <span style="font-family: 'Amiri', serif;"> هل تعلم أن خلوتك مع شاشة هاتفك هي الاختبار الحقيقي لمقدار عفتك وحيائك من الله؟</span>
+                    <strong style="color: var(--primary-color);">وهم المقارنات:</strong>
+                    <span> هل تعلم أن مقارنة نفسك بزميل متفوق لم يحالفه الحظ هي مغالطة عقلية، لأنك لا تعرف ظروفه الخفية التي أثرت عليه؟</span>
                 </div>
                 <div class="info-card">
-                    <strong style="font-family: 'Tajawal', sans-serif;">ثمرة العفة:</strong>
-                    <span style="font-family: 'Amiri', serif;"> هل تعلم أن من ترك شيئاً لله، عوضه الله بنور في قلبه وفراسة في عقله وراحة في نفسه؟</span>
+                    <strong style="color: var(--primary-color);">المحاسبة على الجهد:</strong>
+                    <span> هل تعلم أن الله سبحانه يحاسبنا ويكافئنا على "صدق المحاولة والجهد"، وليس فقط على النتيجة النهائية؟</span>
                 </div>
             </div>
         </div>
@@ -241,13 +247,13 @@
             <h2><span class="section-number">4</span> ومضات فكرية</h2>
             <div class="infographic-grid">
                 <div class="info-card">
-                    <span style="font-family: 'Amiri', serif;">"العين باب القلب، فإذا غضضت بصرك عما حُرّم عليك، أرحت قلبك وحفظت جوارحك."</span>
+                    <span>عمر بن الخطاب رضي الله عنه: "لا يقعدن أحدكم عن طلب الرزق ويقول اللهم ارزقني، فقد علمتم أن السماء لا تمطر ذهباً ولا فضة".</span>
                 </div>
                 <div class="info-card">
-                    <span style="font-family: 'Amiri', serif;">"العفة تاج الوقار؛ من لبسه عاش مهاباً محترماً، ومن خلعه هان على نفسه وعلى الناس."</span>
+                    <span>"الاستسلام بحجة أن (المكتوب سيحدث) هو حيلة يصنعها العقل الباطن ليبرر كسله وهروبه من المسؤولية."</span>
                 </div>
                 <div class="info-card full-width">
-                    <span style="font-family: 'Amiri', serif;">"أعظم أنواع القوة ليست في هزيمة الآخرين، بل في قدرتك على هزيمة رغباتك وإلجام شهواتك."</span>
+                    <span>"توكل على الله كأن الأسباب لا تعني شيئاً، واعمل بالأسباب كأنها كل شيء."</span>
                 </div>
             </div>
         </div>
@@ -255,20 +261,20 @@
         <!-- كلمة الصباح -->
         <div class="section-box intro-box">
             <span class="student-badge">الطالب/ أحمد عبدالله زكور</span>
-            <h2><span class="section-number">5</span> كلمة الصباح (الاحترام العميق للذات)</h2>
-            <p>زملائي الطلاب.. في عالمنا اليوم المفتوح عبر الشاشات، أصبحت الفتن والمناظر التي تخدش الحياء أقرب إلينا من أي وقت مضى، تأتينا أحياناً دون بحث منا. في هذا الواقع، يُقاس مدى نضجك ورجولتك الحقيقية بقدرتك على "التحكم والمقاومة". العفة وحفظ العورة ليستا مجرد أوامر دينية نؤديها بخوف، بل هما "احترام عميق للذات"؛ إدراك منك بأن جسدك له حرمة، وأن قلبك أثمن من أن تلوثه بمشاهد عابرة أو سلوكيات رخيصة.</p>
-            <p>الذي يعجز عن غض بصره وحفظ فرجه، يصبح تدريجياً أسيراً لشهواته، مسلوب الإرادة، مشتت الذهن. أما الشاب الذي يراقب الله في خلوته، ويمسح ما لا يرضي الله من هاتفه، ويغض بصره في الطريق، فهو يبني شخصية صلبة لا تُهزم. اجعلوا الحياء درعكم، واعلموا أن العين التي تغض عن الحرام اليوم، هي ذاتها التي سيقرها الله بالنظر إلى ما يسعدها في الدنيا والآخرة.</p>
+            <h2><span class="section-number">5</span> كلمة الصباح (فخ الأعذار)</h2>
+            <p>زملائي الطلاب.. نسمع أحياناً في أوقات الاختبارات عبارات محبطة مثل: "يا أخي كل شيء مكتوب ومقدر، ليش أتعب نفسي وأذاكر؟"، أو يأتيك شخص يقول: "إذا فلان الذكي والدوافير جابوا العيد في الاختبار، أنا وش بجيب؟ خلني أرتاح أحسن".</p>
+            <p>في الحقيقة، هذا الكلام ليس إيماناً بالقدر، بل هو "فخ نفسيّ" وعذر يصنعه العقل الكسول ليهرب من التعب والمذاكرة. الإيمان الحقيقي بالقدر يعني أن تفعل كل ما بوسعك، وتحرق أوراق المنهج مذاكرة، ثم ترضى بالنتيجة أياً كانت. أما بالنسبة لزميلك المتفوق الذي تعثر، فأنت لا تعلم ما هي ظروفه! قد يكون سهر طوال الليل، أو واجه مشكلة عائلية، أو خانه التوتر. قصته ليست قصتك، ونتيجته لن تحدد مستقبلك. لا تستخدم إخفاقات الآخرين كعذر لتبرير تقصيرك. اعقلها وتوكل، ابذل أقصى جهدك، وكن على يقين أن الله لا يضيع أجر من أحسن عملاً.</p>
         </div>
 
         <!-- الخاتمة والدعاء -->
         <div class="section-box" style="margin-bottom: 0;">
-            <p style="font-family: 'Tajawal', sans-serif; font-weight: 700; margin-bottom: 10px;">الدعاء والخاتمة:</p>
-            <p><strong>الدعاء:</strong> اللهم إنا نسألك الهدى والتقى والعفاف والغنى. اللهم طهر قلوبنا، وحصن فروجنا، واغفر ذنوبنا، واجعلنا ممن يراقبك في السر والعلن. اللهم آمين.</p>
-            <p><strong>الخاتمة:</strong> في الختام.. تذكروا أن العفة قرار شجاع يتخذه الأنظمة، وتاج يزين هامة النبلاء. نتمنى لكم يوماً دراسياً طاهراً وموفقاً، والسلام عليكم ورحمة الله وبركاته.</p>
+            <p style="color: var(--primary-color); font-weight: 800; margin-bottom: 10px;">الدعاء والخاتمة:</p>
+            <p><strong>الدعاء:</strong> اللهم إنا نعوذ بك من العجز والكسل، ونعوذ بك من الإحباط واليأس. اللهم ارزقنا صدق التوكل عليك، وأعنا على الأخذ بالأسباب، وبارك لنا في أوقاتنا وجهدنا. اللهم آمين.</p>
+            <p><strong>الخاتمة:</strong> في الختام.. تذكروا أن المستقبل يُصنع اليوم بالجهد لا بالأعذار. نتمنى لكم يوماً دراسياً مليئاً بالنشاط والإنجاز، والسلام عليكم ورحمة الله وبركاته.</p>
         </div>
 
         <div class="footer-note">
-            تم إعداد هذه الإذاعة لتعزيز الوعي بأهمية الحياء، ومراقبة الله في الخلوات، واحترام الذات.
+            تم إعداد هذه الإذاعة لمحاربة التفكير السلبي وتعزيز قيمة الجهد والمثابرة لدى الطلاب.
         </div>
     </div>
 
